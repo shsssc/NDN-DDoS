@@ -100,7 +100,7 @@ namespace ndn
       {
         std::cout << "One more Interest, delayed by the scheduler" << std::endl;
 
-        Name interestName("/example/testApp/fakeInterest");
+        Name interestName("/exampleApp/testApp/fakeInterest");
         interestName.appendVersion();
 
         Interest interest(interestName);

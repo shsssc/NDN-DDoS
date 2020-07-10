@@ -28,6 +28,25 @@
 #include <iostream>
 #include <list>
 
+#define FAIL                                                                                                                                               \
+  std::cerr << R"(usage: ./producer --prefix <perfix> --static </static/resource1> --static </static/resource2> --dynamic </dynamic/data1>)" << std::endl; \
+  exit(1);
+
+std::string prefix = "";
+std::vector<std::string> staticNames;
+std::vector<std::string> dynamicNames;
+
+std::string genRandomString()
+{
+  std::string result;
+  result.reserve(4096);
+  for (int i = 0; i < 4096; i++)
+  {
+    result.push_back(random());
+  }
+  return result;
+}
+
 // Enclosing code in ndn simplifies coding (can also use `using namespace ndn`)
 namespace ndn
 {
@@ -41,14 +60,27 @@ namespace ndn
       void
       run()
       {
-        m_face.setInterestFilter("/example/testApp/fakeInterest",
+        m_face.setInterestFilter(prefix,
                                  bind(&Producer::onFakeInterest, this, _1, _2),
                                  nullptr, // RegisterPrefixSuccessCallback is optional
                                  bind(&Producer::onRegisterFailed, this, _1, _2));
-        m_face.setInterestFilter("/example/testApp/validInterest",
-                                 bind(&Producer::onValidInterest, this, _1, _2),
-                                 nullptr, // RegisterPrefixSuccessCallback is optional
-                                 bind(&Producer::onRegisterFailed, this, _1, _2));
+
+        for (const std::string &n : staticNames)
+        {
+          m_face.setInterestFilter(prefix + n,
+                                   bind(&Producer::onStaticInterest, this, _1, _2),
+                                   nullptr, // RegisterPrefixSuccessCallback is optional
+                                   bind(&Producer::onRegisterFailed, this, _1, _2));
+        }
+
+        for (const std::string &n : dynamicNames)
+        {
+          m_face.setInterestFilter(prefix + n,
+                                   bind(&Producer::onDynamicInterest, this, _1, _2),
+                                   nullptr, // RegisterPrefixSuccessCallback is optional
+                                   bind(&Producer::onRegisterFailed, this, _1, _2));
+        }
+
         m_face.processEvents();
       }
 
@@ -72,22 +104,42 @@ namespace ndn
       }
 
       void
-      onValidInterest(const InterestFilter &, const Interest &interest)
+      onStaticInterest(const InterestFilter &, const Interest &interest)
       {
         std::cout << ">> I: " << interest << std::endl;
 
-        static const std::string content("Hello, world!");
+        static const std::string content(genRandomString());
 
         // Create Data packet
         auto data = make_shared<Data>(interest.getName());
-        data->setFreshnessPeriod(10_s);
+        data->setFreshnessPeriod(1000000_s);
         data->setContent(reinterpret_cast<const uint8_t *>(content.data()), content.size());
-        data->setContentType(3);
+        data->setContentType(0);
         // Sign Data packet with default identity
         m_keyChain.sign(*data);
 
         // Return Data packet to the requester
-        std::cout << "<< D: " << *data << std::endl;
+        //std::cout << "<< D: " << *data << std::endl;
+        m_face.put(*data);
+      }
+
+      void
+      onDynamicInterest(const InterestFilter &, const Interest &interest)
+      {
+        std::cout << ">> I: " << interest << std::endl;
+
+        static const std::string content(genRandomString());
+
+        // Create Data packet
+        auto data = make_shared<Data>(interest.getName());
+        data->setFreshnessPeriod(2_s);
+        data->setContent(reinterpret_cast<const uint8_t *>(content.data()), content.size());
+        data->setContentType(0);
+        // Sign Data packet with default identity
+        m_keyChain.sign(*data);
+
+        // Return Data packet to the requester
+        //std::cout << "<< D: " << *data << std::endl;
         m_face.put(*data);
       }
 
@@ -109,6 +161,39 @@ namespace ndn
 
 int main(int argc, char **argv)
 {
+
+  if (argc == 1)
+  {
+    FAIL;
+  }
+  for (int i = 1; i < argc; i++)
+  {
+    std::string arg = argv[i];
+    if (i == argc - 1)
+    {
+      std::cerr << "unrecognized argument " << arg << std::endl;
+      FAIL;
+    }
+    if (arg == "-p" || arg == "--prefix")
+    {
+      prefix = (argv[++i]);
+      std::cout << prefix;
+    }
+    else if (arg == "-s" || arg == "--static")
+    {
+      staticNames.push_back(argv[++i]);
+    }
+    else if (arg == "-d" || arg == "--dynamic")
+    {
+      dynamicNames.push_back(argv[++i]);
+    }
+    else
+    {
+      std::cerr << "unrecognized argument " << arg << std::endl;
+      FAIL;
+    }
+  }
+
   try
   {
     ndn::examples::Producer producer;

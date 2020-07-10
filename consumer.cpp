@@ -27,6 +27,14 @@
 #include <boost/asio/io_service.hpp>
 #include <iostream>
 
+#define FAIL                                                                                                                \
+  std::cerr << R"(usage: ./consumer --prefix <perfix> --name <name1> --name <name2> --period <milliseconds>)" << std::endl; \
+  exit(1);
+
+std::string prefix = "";
+std::vector<std::string> names;
+unsigned period = 500;
+
 // Enclosing code in ndn simplifies coding (can also use `using namespace ndn`)
 namespace ndn
 {
@@ -76,23 +84,20 @@ namespace ndn
       {
         std::cout << "Sending Interest, delayed by the scheduler" << std::endl;
 
-        Name interestName("/example/testApp/validInterest");
-        interestName.appendVersion();
-
-        Interest interest(interestName);
-        interest.setCanBePrefix(false);
-        interest.setMustBeFresh(true);
-        interest.setInterestLifetime(2_s);
-
-        std::cout << "Sending Interest " << interest << std::endl;
-        for (int i = 0; i < 2; i++)
+        for (const std::string &n : names)
         {
+          Name interestName(prefix + n);
+          //interestName.appendVersion();
+          Interest interest(interestName);
+          interest.setCanBePrefix(false);
+          interest.setMustBeFresh(true);
+          interest.setInterestLifetime(3_s);
           m_face.expressInterest(interest,
                                  bind(&ConsumerWithTimer::onData, this, _1, _2),
                                  bind(&ConsumerWithTimer::onNack, this, _1, _2),
                                  bind(&ConsumerWithTimer::onTimeout, this, _1));
         }
-        m_scheduler.schedule(1_s, [this] { delayedInterest(); });
+        m_scheduler.schedule(time::milliseconds{period}, [this] { delayedInterest(); });
       }
 
     private:
@@ -107,6 +112,38 @@ namespace ndn
 
 int main(int argc, char **argv)
 {
+  if (argc == 1)
+  {
+    FAIL;
+  }
+
+  for (int i = 1; i < argc; i++)
+  {
+    std::string arg = argv[i];
+    if (i == argc - 1)
+    {
+      std::cerr << "unrecognized argument " << arg << std::endl;
+      FAIL;
+    }
+    if (arg == "-p" || arg == "--prefix")
+    {
+      prefix = (argv[++i]);
+      std::cout << prefix;
+    }
+    else if (arg == "-n" || arg == "--names")
+    {
+      names.push_back(argv[++i]);
+    }
+    else if (arg == "--period")
+    {
+      period = atoi(argv[++i]);
+    }
+    else
+    {
+      std::cerr << "unrecognized argument " << arg << std::endl;
+      FAIL;
+    }
+  }
   try
   {
     ndn::examples::ConsumerWithTimer consumer;
