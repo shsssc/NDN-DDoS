@@ -130,7 +130,7 @@ int main(int argc, char **argv)
       prefix = (argv[++i]);
       std::cout << prefix;
     }
-    else if (arg == "-n" || arg == "--names")
+    else if (arg == "-n" || arg == "--name")
     {
       names.push_back(argv[++i]);
     }
