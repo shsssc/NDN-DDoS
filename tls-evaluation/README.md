@@ -19,5 +19,8 @@ curl https://localhost:6000/ --cacert rsa-4096-cert.pem
 
 Load generator
 
+```bash
+./tls-load-gen.sh 10 https://localhost:6000/
+```
 
 
