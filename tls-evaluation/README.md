@@ -23,4 +23,25 @@ Load generator
 ./tls-load-gen.sh 10 https://localhost:6000/
 ```
 
+## Setup files to host
 
+```bash
+./generate-files.sh
+```
+
+## Start generating load
+
+This script will make use of client.
+
+```bash
+./generate-load.sh
+
+```
+
+## Log squid performance
+
+```bash
+./measure-performance.sh <squid-pid>
+```
+
+this will log the squid performance every 0.5 seconds to squid-measurement.log

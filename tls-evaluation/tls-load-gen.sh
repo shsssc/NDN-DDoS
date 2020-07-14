@@ -7,7 +7,7 @@ echo "url: $url
 rate: $curlpersecond calls / second"
 
 get () {
-  curl -s -v "$url" --cacert rsa-4096-cert.pem 2>&1 | tr '\r\n' '\\n' | awk -v date="$(date +'%r')" '{print $0"\n-----", date}' >> /tmp/perf-test.log
+  curl -s -v "$url" --insecure --cacert rsa-4096-cert.pem 2>&1 | tr '\r\n' '\\n' | awk -v date="$(date +'%r')" '{print $0"\n-----", date}' >> /tmp/perf-test.log
 }
 
 while true

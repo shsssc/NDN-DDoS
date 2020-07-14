@@ -132,7 +132,7 @@ namespace ndn
 
         // Create Data packet
         auto data = make_shared<Data>(interest.getName());
-        data->setFreshnessPeriod(2_s);
+        data->setFreshnessPeriod(50_ms);
         data->setContent(reinterpret_cast<const uint8_t *>(content.data()), content.size());
         data->setContentType(0);
         // Sign Data packet with default identity
