@@ -4,7 +4,7 @@ consumer
 producer
 *output
 *__pycache__
-*.log
+.log
 *.txt
 static*
 dynamic*
