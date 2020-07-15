@@ -97,7 +97,7 @@ namespace ndn
                                  bind(&ConsumerWithTimer::onNack, this, _1, _2),
                                  bind(&ConsumerWithTimer::onTimeout, this, _1));
         }
-        m_scheduler.schedule(time::milliseconds{period}, [this] { delayedInterest(); });
+        m_scheduler.schedule(time::microseconds{period}, [this] { delayedInterest(); });
       }
 
     private:

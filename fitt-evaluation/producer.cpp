@@ -39,8 +39,8 @@ std::vector<std::string> dynamicNames;
 std::string genRandomString()
 {
   std::string result;
-  result.reserve(4096);
-  for (int i = 0; i < 4096; i++)
+  result.reserve(2048);
+  for (int i = 0; i < 2048; i++)
   {
     result.push_back(random());
   }
@@ -132,7 +132,7 @@ namespace ndn
 
         // Create Data packet
         auto data = make_shared<Data>(interest.getName());
-        data->setFreshnessPeriod(50_ms);
+        data->setFreshnessPeriod(6_ms);
         data->setContent(reinterpret_cast<const uint8_t *>(content.data()), content.size());
         data->setContentType(0);
         // Sign Data packet with default identity

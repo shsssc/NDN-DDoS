@@ -41,7 +41,7 @@ This script will make use of client.
 ## Log squid performance
 
 ```bash
-./measure-performance.sh <squid-pid>
+./measure-squid-performance.sh <timeout sec>
 ```
 
-this will log the squid performance every 0.5 seconds to squid-measurement.log
+this will log the squid performance every 0.5 seconds to squid-measurement.log until timeout reached
