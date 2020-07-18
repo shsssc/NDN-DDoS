@@ -36,10 +36,11 @@ def mkplot():
     ax = fig.add_subplot(111)
 
     # read data
-    df1 = pd.read_csv(get_nfd_result(), sep='\s+')
+    header_list = ['n', 'time(ms)', 'total(B)', 'useful-heap(B)', 'extra-heap(B)', 'stacks(B)']
+    df1 = pd.read_csv(get_nfd_result(), sep='\s+', names=header_list)
     df1['total(MB)'] = df1['total(B)'].str.replace(",", "").astype(int) / 1000000
     df1['time(ms)'] = df1['time(ms)'].str.replace(",", "").astype(int) / 1000
-    df2 = pd.read_csv(get_squid_result(), sep='\s+')
+    df2 = pd.read_csv(get_squid_result(), sep='\s+', names=header_list)
     df2['total(MB)'] = df2['total(B)'].str.replace(",", "").astype(int) / 1000000
     df2['time(ms)'] = df2['time(ms)'].str.replace(",", "").astype(int) / 1000
 
