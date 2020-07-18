@@ -20,11 +20,14 @@ def get_squid_result() -> str:
         exit(-1)
     return sys.argv[2]
 
-def smooth(df, attribute):
+def smooth(df):
     xnew = np.linspace(df['time(s)'].min(), df['time(s)'].max(), 1000)
-    df[attribute] = df[attribute].diff()
-    df[attribute].at[0] = 0
-    spl = make_interp_spline(df['time(s)'], df[attribute])
+    df['usertime(ticks)'] = df['usertime(ticks)'].diff()
+    df['usertime(ticks)'].at[0] = 0
+    df['systime(ticks)'] = df['systime(ticks)'].diff()
+    df['systime(ticks)'].at[0] = 0
+    df['cputime(ticks)'] = df['usertime(ticks)'] + df['systime(ticks)']
+    spl = make_interp_spline(df['time(s)'], df['cputime(ticks)'])
     ynew = spl(xnew)
     for i in range(len(ynew)):
         if ynew[i] <= 0:
@@ -34,7 +37,7 @@ def smooth(df, attribute):
 def mkplot():
     # figure and plot
     fig = plt.figure()
-    fig.set_size_inches(4.8, 3.2)
+    fig.set_size_inches(5, 4) 
     ax = fig.add_subplot(111)
 
     # read data
@@ -45,15 +48,18 @@ def mkplot():
     df2['time(s)'] = df2['time(s)'] - df2['time(s)'][0]
 
     # plots
-    xnew, ynew = smooth(df1, 'usertime(ticks)')
-    ax.plot(xnew, ynew)
-    xnew, ynew = smooth(df1, 'systime(ticks)')
-    ax.plot(xnew, ynew)
-    xnew, ynew = smooth(df2, 'usertime(ticks)')
-    ax.plot(xnew, ynew)
-    xnew, ynew = smooth(df2, 'systime(ticks)')
-    ax.plot(xnew, ynew)
-    plt.show()
+    xnew, ynew = smooth(df2)
+    ax.plot(xnew, ynew, '--', label='Squid', color='0.1')
+    xnew, ynew = smooth(df1)
+    ax.plot(xnew, ynew, '-', label='NFD', color='0.4')
+    ax.set_ylim([df1['cputime(ticks)'].min(), df2['cputime(ticks)'].max() + 5])
+    ax.set_xlim(0, 40)
+    ax.annotate('about 5x', xy = (22, 8))
+    ax.arrow(20, 5, 0, 8, width=1, head_length = 3,length_includes_head=True)
+    plt.xlabel("Time (seconds)")
+    plt.ylabel("CPU Use (ticks)")
+    plt.legend()
+    plt.savefig('plot-cpu.pdf')  
 
 if __name__ == "__main__":
     mkplot()
