@@ -58,7 +58,7 @@ namespace ndn
     class Producer
     {
     public:
-      Producer() : m_face(make_shared<ndn::TcpTransport>("127.0.0.1"))
+      Producer() /*: m_face(*make_shared<ndn::TcpTransport>("127.0.0.1"))*/
       {
       }
       void
