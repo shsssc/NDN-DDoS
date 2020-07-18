@@ -25,6 +25,7 @@
 #include <ndn-cxx/security/key-chain.hpp>
 #include <ndn-cxx/security/signing-helpers.hpp>
 //#include <ndn-cxx/lp/nack.hpp>
+#include <ndn-cxx/transport/tcp-transport.hpp>
 #include <iostream>
 #include <list>
 
@@ -39,7 +40,7 @@ std::vector<std::string> dynamicNames;
 std::string genRandomString()
 {
   std::string result;
-  result.reserve(2048);
+  result.reserve(2000);
   for (int i = 0; i < 2048; i++)
   {
     result.push_back(random());
@@ -57,6 +58,9 @@ namespace ndn
     class Producer
     {
     public:
+      Producer() : m_face(make_shared<ndn::TcpTransport>("127.0.0.1"))
+      {
+      }
       void
       run()
       {

@@ -23,7 +23,7 @@
 
 #include <ndn-cxx/face.hpp>
 #include <ndn-cxx/util/scheduler.hpp>
-
+#include <ndn-cxx/transport/tcp-transport.hpp>
 #include <boost/asio/io_service.hpp>
 #include <iostream>
 
@@ -46,7 +46,7 @@ namespace ndn
     {
     public:
       ConsumerWithTimer()
-          : m_face(m_ioService) // Create face with io_service object
+          : m_face(make_shared<ndn::TcpTransport>("127.0.0.1"), m_ioService) // Create face with io_service object
             ,
             m_scheduler(m_ioService)
       {
