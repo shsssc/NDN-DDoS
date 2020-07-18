@@ -1,0 +1,2135 @@
+desc: --time-unit=ms
+cmd: /usr/local/squid/sbin/squid -d1 -N
+time_unit: ms
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=1266
+mem_heap_B=5967139
+mem_heap_extra_B=235117
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=4233
+mem_heap_B=5934307
+mem_heap_extra_B=235117
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=7237
+mem_heap_B=5934307
+mem_heap_extra_B=235117
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=9239
+mem_heap_B=5934307
+mem_heap_extra_B=235117
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=12022
+mem_heap_B=5934307
+mem_heap_extra_B=235117
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=15062
+mem_heap_B=7279076
+mem_heap_extra_B=251676
+mem_stacks_B=0
+heap_tree=peak
+n10: 7279076 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n6: 4013239 0x66B487: xcalloc (xalloc.cc:83)
+  n10: 2916944 0x3AC83F: StatHist::init(unsigned int, double (*)(double), double (*)(double), double, double) (StatHist.cc:37)
+   n1: 321600 0x3A17C3: statCountersInitSpecial (stat.cc:1225)
+    n3: 321600 0x3A17C3: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A17DD: statCountersInitSpecial (stat.cc:1226)
+    n3: 321600 0x3A17DD: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A17FA: statCountersInitSpecial (stat.cc:1227)
+    n3: 321600 0x3A17FA: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A1817: statCountersInitSpecial (stat.cc:1228)
+    n3: 321600 0x3A1817: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A1834: statCountersInitSpecial (stat.cc:1229)
+    n3: 321600 0x3A1834: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A1851: statCountersInitSpecial (stat.cc:1233)
+    n3: 321600 0x3A1851: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A186E: statCountersInitSpecial (stat.cc:1234)
+    n3: 321600 0x3A186E: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A188B: statCountersInitSpecial (stat.cc:1238)
+    n3: 321600 0x3A188B: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 277648 0x3A18E1: statCountersInitSpecial (stat.cc:1246)
+    n3: 277648 0x3A18E1: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 149184 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 149184 0x36E986: mainInitialize (main.cc:1239)
+       n1: 149184 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 149184 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 149184 0x25CF10: main (main.cc:1403)
+     n1: 126392 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 126392 0x36E986: mainInitialize (main.cc:1239)
+       n1: 126392 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 126392 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 126392 0x25CF10: main (main.cc:1403)
+     n0: 2072 in 1 place, below massif's threshold (1.00%)
+   n0: 66496 in 9 places, all below massif's threshold (1.00%)
+  n1: 414400 0x4B40C9: comm_init() (comm.cc:1223)
+   n1: 414400 0x36E05C: SquidMain(int, char**) (main.cc:1651)
+    n1: 414400 0x25CF10: SquidMainSafe (main.cc:1415)
+     n0: 414400 0x25CF10: main (main.cc:1403)
+  n1: 393211 0x5BCE67: MemBlob::memAlloc(unsigned int) (MemBlob.cc:94)
+   n1: 393211 0x5BD4D9: MemBlob::MemBlob(unsigned int) (MemBlob.cc:57)
+    n1: 393211 0x5C1AF0: SBuf::reAlloc(unsigned int) (SBuf.cc:859)
+     n2: 393211 0x5C1FBD: SBuf::cow(unsigned int) (SBuf.cc:895)
+      n1: 327675 0x5C27F2: SBuf::rawSpace(unsigned int) (SBuf.cc:173)
+       n1: 327675 0x5C2BB5: SBuf::rawAppendStart(unsigned int) (SBuf.cc:138)
+        n1: 327675 0x53C040: Ssl::ServerBio::readAndBuffer(bio_st*) (bio.cc:335)
+         n1: 327675 0x53C2A1: Ssl::ServerBio::readAndParse(char*, int, bio_st*) (bio.cc:303)
+          n1: 327675 0x55BDFB9: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1)
+           n1: 327675 0x55BCE52: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1)
+            n1: 327675 0x55BD402: BIO_read (in /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1)
+             n1: 327675 0x52A6912: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+              n1: 327675 0x52AAFBC: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+               n1: 327675 0x52A86C1: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+                n1: 327675 0x52DA6F7: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+                 n1: 327675 0x52D062C: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+                  n1: 327675 0x52BC4C3: SSL_do_handshake (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+                   n1: 327675 0x52A0EF: Security::PeerConnector::negotiate() (PeerConnector.cc:189)
+                    n1: 327675 0x52B4D7: Security::PeerConnector::start() (PeerConnector.cc:65)
+                     n1: 327675 0x4AD1B1: JobDialer<AsyncJob>::dial(AsyncCall&) (AsyncJobCalls.h:174)
+                      n1: 327675 0x4A87B8: AsyncCall::make() (AsyncCall.cc:40)
+                       n1: 327675 0x4A9DD7: AsyncCallQueue::fireNext() (AsyncCallQueue.cc:56)
+                        n1: 327675 0x4AA158: AsyncCallQueue::fire() (AsyncCallQueue.cc:42)
+                         n1: 327675 0x300498: dispatchCalls (EventLoop.cc:144)
+                          n1: 327675 0x300498: EventLoop::runOnce() (EventLoop.cc:121)
+                           n1: 327675 0x300587: EventLoop::run() (EventLoop.cc:83)
+                            n1: 327675 0x36E388: SquidMain(int, char**) (main.cc:1707)
+                             n1: 327675 0x25CF10: SquidMainSafe (main.cc:1415)
+                              n0: 327675 0x25CF10: main (main.cc:1403)
+      n0: 65536 in 1 place, below massif's threshold (1.00%)
+  n1: 124320 0x50E054: Comm::CallbackTableInit() (IoCallback.cc:25)
+   n1: 124320 0x4B40F4: comm_init() (comm.cc:1230)
+    n1: 124320 0x36E05C: SquidMain(int, char**) (main.cc:1651)
+     n1: 124320 0x25CF10: SquidMainSafe (main.cc:1415)
+      n0: 124320 0x25CF10: main (main.cc:1403)
+  n0: 87948 in 19 places, all below massif's threshold (1.00%)
+  n1: 76416 0x666EF6: hash_create (hash.cc:117)
+   n0: 76416 in 7 places, all below massif's threshold (1.00%)
+ n3: 1205665 0x66B50C: xmalloc (xalloc.cc:114)
+  n4: 737560 0x65D684: MemPoolMalloc::allocate() (PoolMalloc.cc:37)
+   n0: 245144 in 39 places, all below massif's threshold (1.00%)
+   n1: 223344 0x3B04A6: operator new (mem_node.h:19)
+    n1: 223344 0x3B04A6: mem_hdr::nodeToRecieve(long) (stmem.cc:312)
+     n1: 223344 0x3B113D: mem_hdr::write(StoreIOBuffer const&) (stmem.cc:361)
+      n1: 223344 0x3710EF: MemObject::write(StoreIOBuffer const&) (MemObject.cc:158)
+       n1: 223344 0x3B74C7: StoreEntry::write(StoreIOBuffer) (store.cc:829)
+        n1: 223344 0x3B1AD8: StoreEntry::append(char const*, int) (store.cc:855)
+         n1: 223344 0x355D5C: HttpReply::packHeadersUsingSlowPacker(Packable&) const (HttpReply.cc:98)
+          n2: 223344 0x3B5315: StoreEntry::startWriting() (store.cc:1834)
+           n1: 210936 0x3B5557: StoreEntry::replaceHttpReply(HttpReply*, bool) (store.cc:1817)
+            n1: 210936 0x373836: MimeIcon::created(StoreEntry*) (mime.cc:423)
+             n1: 210936 0x3743F5: MimeIcon::load() (mime.cc:357)
+              n1: 210936 0x374A98: mimeInit(char*) (mime.cc:332)
+               n1: 210936 0x36E99C: mainInitialize (main.cc:1242)
+                n1: 210936 0x36E99C: SquidMain(int, char**) (main.cc:1666)
+                 n1: 210936 0x25CF10: SquidMainSafe (main.cc:1415)
+                  n0: 210936 0x25CF10: main (main.cc:1403)
+           n0: 12408 in 1 place, below massif's threshold (1.00%)
+   n1: 160032 0x5BCE67: MemBlob::memAlloc(unsigned int) (MemBlob.cc:94)
+    n2: 160032 0x5BD4D9: MemBlob::MemBlob(unsigned int) (MemBlob.cc:57)
+     n1: 159992 0x5C1AF0: SBuf::reAlloc(unsigned int) (SBuf.cc:859)
+      n2: 159992 0x5C1FBD: SBuf::cow(unsigned int) (SBuf.cc:895)
+       n2: 139264 0x5C2364: SBuf::reserveCapacity(unsigned int) (SBuf.cc:108)
+        n1: 114688 0x5195DF: AnyP::Uri::absolute() const (Uri.cc:492)
+         n1: 114688 0x3599B8: HttpRequest::canonicalCleanUrl() const (HttpRequest.cc:679)
+          n1: 114688 0x2C68A6: ClientHttpRequest::setLogUriToRequestUri() (client_side_request.cc:1909)
+           n1: 114688 0x2C7453: ClientHttpRequest::initRequest(HttpRequest*) (client_side_request.cc:1654)
+            n1: 114688 0x48C16B: Http::One::Server::buildHttpRequest(RefCount<Http::Stream>&) (Http1Server.cc:193)
+             n1: 114688 0x48D7D1: Http::One::Server::processParsedRequest(RefCount<Http::Stream>&) (Http1Server.cc:227)
+              n1: 114688 0x2AC7EF: ConnStateData::clientParseRequests() (client_side.cc:2114)
+               n1: 114688 0x2B30F5: ConnStateData::afterClientRead() (client_side.cc:2148)
+                n1: 114688 0x492E4F: Server::doClientRead(CommIoCbParams const&) (Server.cc:176)
+                 n1: 114688 0x493E49: doDial (CommCalls.h:205)
+                  n1: 114688 0x493E49: JobDialer<Server>::dial(AsyncCall&) (AsyncJobCalls.h:174)
+                   n1: 114688 0x4A87B8: AsyncCall::make() (AsyncCall.cc:40)
+                    n1: 114688 0x4A9DD7: AsyncCallQueue::fireNext() (AsyncCallQueue.cc:56)
+                     n1: 114688 0x4AA158: AsyncCallQueue::fire() (AsyncCallQueue.cc:42)
+                      n1: 114688 0x300498: dispatchCalls (EventLoop.cc:144)
+                       n1: 114688 0x300498: EventLoop::runOnce() (EventLoop.cc:121)
+                        n1: 114688 0x300587: EventLoop::run() (EventLoop.cc:83)
+                         n1: 114688 0x36E388: SquidMain(int, char**) (main.cc:1707)
+                          n1: 114688 0x25CF10: SquidMainSafe (main.cc:1415)
+                           n0: 114688 0x25CF10: main (main.cc:1403)
+        n0: 24576 in 1 place, below massif's threshold (1.00%)
+       n0: 20728 in 1 place, below massif's threshold (1.00%)
+     n0: 40 in 1 place, below massif's threshold (1.00%)
+   n1: 109040 0x35C509: operator new (HttpRequest.h:49)
+    n2: 109040 0x35C509: HttpRequest::FromUrl(char const*, RefCount<MasterXaction> const&, HttpRequestMethod const&) (HttpRequest.cc:524)
+     n1: 95880 0x37366F: MimeIcon::created(StoreEntry*) (mime.cc:405)
+      n1: 95880 0x3743F5: MimeIcon::load() (mime.cc:357)
+       n1: 95880 0x374A98: mimeInit(char*) (mime.cc:332)
+        n1: 95880 0x36E99C: mainInitialize (main.cc:1242)
+         n1: 95880 0x36E99C: SquidMain(int, char**) (main.cc:1666)
+          n1: 95880 0x25CF10: SquidMainSafe (main.cc:1415)
+           n0: 95880 0x25CF10: main (main.cc:1403)
+     n0: 13160 in 1 place, below massif's threshold (1.00%)
+  n1: 393216 0x50ECBD: Comm::SelectLoopInit() (ModEpoll.cc:69)
+   n1: 393216 0x36E05C: SquidMain(int, char**) (main.cc:1651)
+    n1: 393216 0x25CF10: SquidMainSafe (main.cc:1415)
+     n0: 393216 0x25CF10: main (main.cc:1403)
+  n0: 74889 in 11 places, all below massif's threshold (1.00%)
+ n0: 612512 in 339 places, all below massif's threshold (1.00%)
+ n1: 483328 0x68223BF: build_trtable (regexec.c:3398)
+  n1: 483328 0x682D187: transit_state (regexec.c:2253)
+   n1: 483328 0x682D187: check_matching (regexec.c:1118)
+    n1: 483328 0x682D187: re_search_internal (regexec.c:790)
+     n2: 483328 0x682E7F9: regexec@@GLIBC_2.3.4 (regexec.c:220)
+      n1: 481280 0x373006: mimeGetEntry(char const*, int) (mime.cc:92)
+       n1: 481280 0x37339A: mimeGetContentType(char const*) (mime.cc:177)
+        n1: 481280 0x3743AD: MimeIcon::load() (mime.cc:352)
+         n1: 481280 0x374A98: mimeInit(char*) (mime.cc:332)
+          n1: 481280 0x36E99C: mainInitialize (main.cc:1242)
+           n1: 481280 0x36E99C: SquidMain(int, char**) (main.cc:1666)
+            n1: 481280 0x25CF10: SquidMainSafe (main.cc:1415)
+             n0: 481280 0x25CF10: main (main.cc:1403)
+      n0: 2048 in 1 place, below massif's threshold (1.00%)
+ n1: 262184 0x25C5A2: __static_initialization_and_destruction_0 (FwdState.cc:78)
+  n1: 262184 0x25C5A2: _GLOBAL__sub_I__ZN8FwdState15CBDATA_FwdStateE (FwdState.cc:1343)
+   n1: 262184 0x66B93C: __libc_csu_init (in /usr/local/squid/sbin/squid)
+    n0: 262184 0x674EB27: (below main) (libc-start.c:266)
+ n1: 183832 0x52A915B: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+  n1: 183832 0x52A92F8: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+   n1: 183832 0x52D0009: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+    n2: 183832 0x52BC4C3: SSL_do_handshake (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+     n1: 100272 0x29538E: tlsAttemptHandshake(ConnStateData*, void (*)(int, void*)) (client_side.cc:2554)
+      n1: 100272 0x299D07: clientNegotiateSSL(int, void*) (client_side.cc:2620)
+       n1: 100272 0x50F34C: Comm::DoSelect(int) (ModEpoll.cc:268)
+        n1: 100272 0x4B944D: CommSelectEngine::checkEvents(int) (comm.cc:1847)
+         n1: 100272 0x3002A7: EventLoop::checkEngine(AsyncEngine*, bool) (EventLoop.cc:36)
+          n1: 100272 0x30047C: EventLoop::runOnce() (EventLoop.cc:115)
+           n1: 100272 0x300587: EventLoop::run() (EventLoop.cc:83)
+            n1: 100272 0x36E388: SquidMain(int, char**) (main.cc:1707)
+             n1: 100272 0x25CF10: SquidMainSafe (main.cc:1415)
+              n0: 100272 0x25CF10: main (main.cc:1403)
+     n1: 83560 0x52A0EF: Security::PeerConnector::negotiate() (PeerConnector.cc:189)
+      n1: 83560 0x52B4D7: Security::PeerConnector::start() (PeerConnector.cc:65)
+       n1: 83560 0x4AD1B1: JobDialer<AsyncJob>::dial(AsyncCall&) (AsyncJobCalls.h:174)
+        n1: 83560 0x4A87B8: AsyncCall::make() (AsyncCall.cc:40)
+         n1: 83560 0x4A9DD7: AsyncCallQueue::fireNext() (AsyncCallQueue.cc:56)
+          n1: 83560 0x4AA158: AsyncCallQueue::fire() (AsyncCallQueue.cc:42)
+           n1: 83560 0x300498: dispatchCalls (EventLoop.cc:144)
+            n1: 83560 0x300498: EventLoop::runOnce() (EventLoop.cc:121)
+             n1: 83560 0x300587: EventLoop::run() (EventLoop.cc:83)
+              n1: 83560 0x36E388: SquidMain(int, char**) (main.cc:1707)
+               n1: 83560 0x25CF10: SquidMainSafe (main.cc:1415)
+                n0: 83560 0x25CF10: main (main.cc:1403)
+ n1: 182160 0x52A9271: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+  n1: 182160 0x52A930E: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+   n1: 182160 0x52D0009: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+    n2: 182160 0x52BC4C3: SSL_do_handshake (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+     n1: 99360 0x29538E: tlsAttemptHandshake(ConnStateData*, void (*)(int, void*)) (client_side.cc:2554)
+      n1: 99360 0x299D07: clientNegotiateSSL(int, void*) (client_side.cc:2620)
+       n1: 99360 0x50F34C: Comm::DoSelect(int) (ModEpoll.cc:268)
+        n1: 99360 0x4B944D: CommSelectEngine::checkEvents(int) (comm.cc:1847)
+         n1: 99360 0x3002A7: EventLoop::checkEngine(AsyncEngine*, bool) (EventLoop.cc:36)
+          n1: 99360 0x30047C: EventLoop::runOnce() (EventLoop.cc:115)
+           n1: 99360 0x300587: EventLoop::run() (EventLoop.cc:83)
+            n1: 99360 0x36E388: SquidMain(int, char**) (main.cc:1707)
+             n1: 99360 0x25CF10: SquidMainSafe (main.cc:1415)
+              n0: 99360 0x25CF10: main (main.cc:1403)
+     n1: 82800 0x52A0EF: Security::PeerConnector::negotiate() (PeerConnector.cc:189)
+      n1: 82800 0x52B4D7: Security::PeerConnector::start() (PeerConnector.cc:65)
+       n1: 82800 0x4AD1B1: JobDialer<AsyncJob>::dial(AsyncCall&) (AsyncJobCalls.h:174)
+        n1: 82800 0x4A87B8: AsyncCall::make() (AsyncCall.cc:40)
+         n1: 82800 0x4A9DD7: AsyncCallQueue::fireNext() (AsyncCallQueue.cc:56)
+          n1: 82800 0x4AA158: AsyncCallQueue::fire() (AsyncCallQueue.cc:42)
+           n1: 82800 0x300498: dispatchCalls (EventLoop.cc:144)
+            n1: 82800 0x300498: EventLoop::runOnce() (EventLoop.cc:121)
+             n1: 82800 0x300587: EventLoop::run() (EventLoop.cc:83)
+              n1: 82800 0x36E388: SquidMain(int, char**) (main.cc:1707)
+               n1: 82800 0x25CF10: SquidMainSafe (main.cc:1415)
+                n0: 82800 0x25CF10: main (main.cc:1403)
+ n1: 145228 0x568BE58: CRYPTO_zalloc (in /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1)
+  n0: 145228 in 86 places, all below massif's threshold (1.00%)
+ n2: 110072 0x55DFE27: BUF_MEM_grow (in /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1)
+  n2: 109240 0x52D07FF: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+   n2: 109240 0x52BC4C3: SSL_do_handshake (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+    n1: 87392 0x52A0EF: Security::PeerConnector::negotiate() (PeerConnector.cc:189)
+     n1: 87392 0x52B4D7: Security::PeerConnector::start() (PeerConnector.cc:65)
+      n1: 87392 0x4AD1B1: JobDialer<AsyncJob>::dial(AsyncCall&) (AsyncJobCalls.h:174)
+       n1: 87392 0x4A87B8: AsyncCall::make() (AsyncCall.cc:40)
+        n1: 87392 0x4A9DD7: AsyncCallQueue::fireNext() (AsyncCallQueue.cc:56)
+         n1: 87392 0x4AA158: AsyncCallQueue::fire() (AsyncCallQueue.cc:42)
+          n1: 87392 0x300498: dispatchCalls (EventLoop.cc:144)
+           n1: 87392 0x300498: EventLoop::runOnce() (EventLoop.cc:121)
+            n1: 87392 0x300587: EventLoop::run() (EventLoop.cc:83)
+             n1: 87392 0x36E388: SquidMain(int, char**) (main.cc:1707)
+              n1: 87392 0x25CF10: SquidMainSafe (main.cc:1415)
+               n0: 87392 0x25CF10: main (main.cc:1403)
+    n0: 21848 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 832 in 5 places, all below massif's threshold (1.00%)
+ n2: 80856 0x568A105: OPENSSL_LH_insert (in /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1)
+  n1: 75432 0x56687F2: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1)
+   n0: 75432 in 5 places, all below massif's threshold (1.00%)
+  n0: 5424 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=7
+#-----------
+time=17592
+mem_heap_B=7099883
+mem_heap_extra_B=250869
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=20504
+mem_heap_B=7100382
+mem_heap_extra_B=251066
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=23764
+mem_heap_B=7067389
+mem_heap_extra_B=250939
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=27140
+mem_heap_B=7092322
+mem_heap_extra_B=250366
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=30516
+mem_heap_B=7056216
+mem_heap_extra_B=250240
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=34002
+mem_heap_B=7089332
+mem_heap_extra_B=250012
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=37554
+mem_heap_B=7106286
+mem_heap_extra_B=251426
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=41106
+mem_heap_B=7000606
+mem_heap_extra_B=250546
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=44850
+mem_heap_B=7202833
+mem_heap_extra_B=251263
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=48786
+mem_heap_B=7067669
+mem_heap_extra_B=251115
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=52722
+mem_heap_B=7100563
+mem_heap_extra_B=250765
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=54690
+mem_heap_B=7203089
+mem_heap_extra_B=251359
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=56658
+mem_heap_B=7068687
+mem_heap_extra_B=250689
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=58626
+mem_heap_B=7059714
+mem_heap_extra_B=250582
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=60594
+mem_heap_B=7107570
+mem_heap_extra_B=251614
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=62562
+mem_heap_B=7030454
+mem_heap_extra_B=250786
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=64530
+mem_heap_B=7107558
+mem_heap_extra_B=251698
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=66498
+mem_heap_B=7105438
+mem_heap_extra_B=251498
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=68466
+mem_heap_B=7058890
+mem_heap_extra_B=250478
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=70434
+mem_heap_B=7111954
+mem_heap_extra_B=251782
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=72402
+mem_heap_B=7111954
+mem_heap_extra_B=251830
+mem_stacks_B=0
+heap_tree=detailed
+n10: 7111954 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n6: 3915520 0x66B487: xcalloc (xalloc.cc:83)
+  n10: 2916944 0x3AC83F: StatHist::init(unsigned int, double (*)(double), double (*)(double), double, double) (StatHist.cc:37)
+   n1: 321600 0x3A17C3: statCountersInitSpecial (stat.cc:1225)
+    n3: 321600 0x3A17C3: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A17DD: statCountersInitSpecial (stat.cc:1226)
+    n3: 321600 0x3A17DD: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A17FA: statCountersInitSpecial (stat.cc:1227)
+    n3: 321600 0x3A17FA: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A1817: statCountersInitSpecial (stat.cc:1228)
+    n3: 321600 0x3A1817: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A1834: statCountersInitSpecial (stat.cc:1229)
+    n3: 321600 0x3A1834: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A1851: statCountersInitSpecial (stat.cc:1233)
+    n3: 321600 0x3A1851: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A186E: statCountersInitSpecial (stat.cc:1234)
+    n3: 321600 0x3A186E: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A188B: statCountersInitSpecial (stat.cc:1238)
+    n3: 321600 0x3A188B: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 277648 0x3A18E1: statCountersInitSpecial (stat.cc:1246)
+    n3: 277648 0x3A18E1: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 149184 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 149184 0x36E986: mainInitialize (main.cc:1239)
+       n1: 149184 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 149184 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 149184 0x25CF10: main (main.cc:1403)
+     n1: 126392 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 126392 0x36E986: mainInitialize (main.cc:1239)
+       n1: 126392 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 126392 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 126392 0x25CF10: main (main.cc:1403)
+     n0: 2072 in 1 place, below massif's threshold (1.00%)
+   n0: 66496 in 9 places, all below massif's threshold (1.00%)
+  n1: 414400 0x4B40C9: comm_init() (comm.cc:1223)
+   n1: 414400 0x36E05C: SquidMain(int, char**) (main.cc:1651)
+    n1: 414400 0x25CF10: SquidMainSafe (main.cc:1415)
+     n0: 414400 0x25CF10: main (main.cc:1403)
+  n1: 262140 0x5BCE67: MemBlob::memAlloc(unsigned int) (MemBlob.cc:94)
+   n1: 262140 0x5BD4D9: MemBlob::MemBlob(unsigned int) (MemBlob.cc:57)
+    n1: 262140 0x5C1AF0: SBuf::reAlloc(unsigned int) (SBuf.cc:859)
+     n2: 262140 0x5C1FBD: SBuf::cow(unsigned int) (SBuf.cc:895)
+      n1: 262140 0x5C27F2: SBuf::rawSpace(unsigned int) (SBuf.cc:173)
+       n1: 262140 0x5C2BB5: SBuf::rawAppendStart(unsigned int) (SBuf.cc:138)
+        n1: 262140 0x53C040: Ssl::ServerBio::readAndBuffer(bio_st*) (bio.cc:335)
+         n1: 262140 0x53C2A1: Ssl::ServerBio::readAndParse(char*, int, bio_st*) (bio.cc:303)
+          n1: 262140 0x55BDFB9: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1)
+           n1: 262140 0x55BCE52: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1)
+            n1: 262140 0x55BD402: BIO_read (in /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1)
+             n1: 262140 0x52A6912: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+              n1: 262140 0x52AAFBC: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+               n1: 262140 0x52A86C1: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+                n1: 262140 0x52DA6F7: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+                 n1: 262140 0x52D062C: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+                  n1: 262140 0x52BC4C3: SSL_do_handshake (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+                   n1: 262140 0x52A0EF: Security::PeerConnector::negotiate() (PeerConnector.cc:189)
+                    n1: 262140 0x52B4D7: Security::PeerConnector::start() (PeerConnector.cc:65)
+                     n1: 262140 0x4AD1B1: JobDialer<AsyncJob>::dial(AsyncCall&) (AsyncJobCalls.h:174)
+                      n1: 262140 0x4A87B8: AsyncCall::make() (AsyncCall.cc:40)
+                       n1: 262140 0x4A9DD7: AsyncCallQueue::fireNext() (AsyncCallQueue.cc:56)
+                        n1: 262140 0x4AA158: AsyncCallQueue::fire() (AsyncCallQueue.cc:42)
+                         n1: 262140 0x300498: dispatchCalls (EventLoop.cc:144)
+                          n1: 262140 0x300498: EventLoop::runOnce() (EventLoop.cc:121)
+                           n1: 262140 0x300587: EventLoop::run() (EventLoop.cc:83)
+                            n1: 262140 0x36E388: SquidMain(int, char**) (main.cc:1707)
+                             n1: 262140 0x25CF10: SquidMainSafe (main.cc:1415)
+                              n0: 262140 0x25CF10: main (main.cc:1403)
+      n0: 0 in 1 place, below massif's threshold (1.00%)
+  n1: 124320 0x50E054: Comm::CallbackTableInit() (IoCallback.cc:25)
+   n1: 124320 0x4B40F4: comm_init() (comm.cc:1230)
+    n1: 124320 0x36E05C: SquidMain(int, char**) (main.cc:1651)
+     n1: 124320 0x25CF10: SquidMainSafe (main.cc:1415)
+      n0: 124320 0x25CF10: main (main.cc:1403)
+  n0: 121300 in 19 places, all below massif's threshold (1.00%)
+  n1: 76416 0x666EF6: hash_create (hash.cc:117)
+   n0: 76416 in 7 places, all below massif's threshold (1.00%)
+ n3: 1205739 0x66B50C: xmalloc (xalloc.cc:114)
+  n4: 737704 0x65D684: MemPoolMalloc::allocate() (PoolMalloc.cc:37)
+   n0: 245288 in 39 places, all below massif's threshold (1.00%)
+   n1: 223344 0x3B04A6: operator new (mem_node.h:19)
+    n1: 223344 0x3B04A6: mem_hdr::nodeToRecieve(long) (stmem.cc:312)
+     n1: 223344 0x3B113D: mem_hdr::write(StoreIOBuffer const&) (stmem.cc:361)
+      n1: 223344 0x3710EF: MemObject::write(StoreIOBuffer const&) (MemObject.cc:158)
+       n1: 223344 0x3B74C7: StoreEntry::write(StoreIOBuffer) (store.cc:829)
+        n1: 223344 0x3B1AD8: StoreEntry::append(char const*, int) (store.cc:855)
+         n1: 223344 0x355D5C: HttpReply::packHeadersUsingSlowPacker(Packable&) const (HttpReply.cc:98)
+          n2: 223344 0x3B5315: StoreEntry::startWriting() (store.cc:1834)
+           n1: 210936 0x3B5557: StoreEntry::replaceHttpReply(HttpReply*, bool) (store.cc:1817)
+            n1: 210936 0x373836: MimeIcon::created(StoreEntry*) (mime.cc:423)
+             n1: 210936 0x3743F5: MimeIcon::load() (mime.cc:357)
+              n1: 210936 0x374A98: mimeInit(char*) (mime.cc:332)
+               n1: 210936 0x36E99C: mainInitialize (main.cc:1242)
+                n1: 210936 0x36E99C: SquidMain(int, char**) (main.cc:1666)
+                 n1: 210936 0x25CF10: SquidMainSafe (main.cc:1415)
+                  n0: 210936 0x25CF10: main (main.cc:1403)
+           n0: 12408 in 1 place, below massif's threshold (1.00%)
+   n1: 160032 0x5BCE67: MemBlob::memAlloc(unsigned int) (MemBlob.cc:94)
+    n2: 160032 0x5BD4D9: MemBlob::MemBlob(unsigned int) (MemBlob.cc:57)
+     n1: 159992 0x5C1AF0: SBuf::reAlloc(unsigned int) (SBuf.cc:859)
+      n2: 159992 0x5C1FBD: SBuf::cow(unsigned int) (SBuf.cc:895)
+       n2: 139264 0x5C2364: SBuf::reserveCapacity(unsigned int) (SBuf.cc:108)
+        n1: 114688 0x5195DF: AnyP::Uri::absolute() const (Uri.cc:492)
+         n1: 114688 0x3599B8: HttpRequest::canonicalCleanUrl() const (HttpRequest.cc:679)
+          n1: 114688 0x2C68A6: ClientHttpRequest::setLogUriToRequestUri() (client_side_request.cc:1909)
+           n1: 114688 0x2C7453: ClientHttpRequest::initRequest(HttpRequest*) (client_side_request.cc:1654)
+            n1: 114688 0x48C16B: Http::One::Server::buildHttpRequest(RefCount<Http::Stream>&) (Http1Server.cc:193)
+             n1: 114688 0x48D7D1: Http::One::Server::processParsedRequest(RefCount<Http::Stream>&) (Http1Server.cc:227)
+              n1: 114688 0x2AC7EF: ConnStateData::clientParseRequests() (client_side.cc:2114)
+               n1: 114688 0x2B30F5: ConnStateData::afterClientRead() (client_side.cc:2148)
+                n1: 114688 0x492E4F: Server::doClientRead(CommIoCbParams const&) (Server.cc:176)
+                 n1: 114688 0x493E49: doDial (CommCalls.h:205)
+                  n1: 114688 0x493E49: JobDialer<Server>::dial(AsyncCall&) (AsyncJobCalls.h:174)
+                   n1: 114688 0x4A87B8: AsyncCall::make() (AsyncCall.cc:40)
+                    n1: 114688 0x4A9DD7: AsyncCallQueue::fireNext() (AsyncCallQueue.cc:56)
+                     n1: 114688 0x4AA158: AsyncCallQueue::fire() (AsyncCallQueue.cc:42)
+                      n1: 114688 0x300498: dispatchCalls (EventLoop.cc:144)
+                       n1: 114688 0x300498: EventLoop::runOnce() (EventLoop.cc:121)
+                        n1: 114688 0x300587: EventLoop::run() (EventLoop.cc:83)
+                         n1: 114688 0x36E388: SquidMain(int, char**) (main.cc:1707)
+                          n1: 114688 0x25CF10: SquidMainSafe (main.cc:1415)
+                           n0: 114688 0x25CF10: main (main.cc:1403)
+        n0: 24576 in 1 place, below massif's threshold (1.00%)
+       n0: 20728 in 1 place, below massif's threshold (1.00%)
+     n0: 40 in 1 place, below massif's threshold (1.00%)
+   n1: 109040 0x35C509: operator new (HttpRequest.h:49)
+    n2: 109040 0x35C509: HttpRequest::FromUrl(char const*, RefCount<MasterXaction> const&, HttpRequestMethod const&) (HttpRequest.cc:524)
+     n1: 95880 0x37366F: MimeIcon::created(StoreEntry*) (mime.cc:405)
+      n1: 95880 0x3743F5: MimeIcon::load() (mime.cc:357)
+       n1: 95880 0x374A98: mimeInit(char*) (mime.cc:332)
+        n1: 95880 0x36E99C: mainInitialize (main.cc:1242)
+         n1: 95880 0x36E99C: SquidMain(int, char**) (main.cc:1666)
+          n1: 95880 0x25CF10: SquidMainSafe (main.cc:1415)
+           n0: 95880 0x25CF10: main (main.cc:1403)
+     n0: 13160 in 1 place, below massif's threshold (1.00%)
+  n1: 393216 0x50ECBD: Comm::SelectLoopInit() (ModEpoll.cc:69)
+   n1: 393216 0x36E05C: SquidMain(int, char**) (main.cc:1651)
+    n1: 393216 0x25CF10: SquidMainSafe (main.cc:1415)
+     n0: 393216 0x25CF10: main (main.cc:1403)
+  n0: 74819 in 11 places, all below massif's threshold (1.00%)
+ n0: 604147 in 339 places, all below massif's threshold (1.00%)
+ n1: 483328 0x68223BF: build_trtable (regexec.c:3398)
+  n1: 483328 0x682D187: transit_state (regexec.c:2253)
+   n1: 483328 0x682D187: check_matching (regexec.c:1118)
+    n1: 483328 0x682D187: re_search_internal (regexec.c:790)
+     n2: 483328 0x682E7F9: regexec@@GLIBC_2.3.4 (regexec.c:220)
+      n1: 481280 0x373006: mimeGetEntry(char const*, int) (mime.cc:92)
+       n1: 481280 0x37339A: mimeGetContentType(char const*) (mime.cc:177)
+        n1: 481280 0x3743AD: MimeIcon::load() (mime.cc:352)
+         n1: 481280 0x374A98: mimeInit(char*) (mime.cc:332)
+          n1: 481280 0x36E99C: mainInitialize (main.cc:1242)
+           n1: 481280 0x36E99C: SquidMain(int, char**) (main.cc:1666)
+            n1: 481280 0x25CF10: SquidMainSafe (main.cc:1415)
+             n0: 481280 0x25CF10: main (main.cc:1403)
+      n0: 2048 in 1 place, below massif's threshold (1.00%)
+ n1: 262184 0x25C5A2: __static_initialization_and_destruction_0 (FwdState.cc:78)
+  n1: 262184 0x25C5A2: _GLOBAL__sub_I__ZN8FwdState15CBDATA_FwdStateE (FwdState.cc:1343)
+   n1: 262184 0x66B93C: __libc_csu_init (in /usr/local/squid/sbin/squid)
+    n0: 262184 0x674EB27: (below main) (libc-start.c:266)
+ n1: 167120 0x52A915B: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+  n1: 167120 0x52A92F8: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+   n1: 167120 0x52D0009: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+    n2: 167120 0x52BC4C3: SSL_do_handshake (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+     n1: 100272 0x29538E: tlsAttemptHandshake(ConnStateData*, void (*)(int, void*)) (client_side.cc:2554)
+      n1: 100272 0x299D07: clientNegotiateSSL(int, void*) (client_side.cc:2620)
+       n1: 100272 0x50F34C: Comm::DoSelect(int) (ModEpoll.cc:268)
+        n1: 100272 0x4B944D: CommSelectEngine::checkEvents(int) (comm.cc:1847)
+         n1: 100272 0x3002A7: EventLoop::checkEngine(AsyncEngine*, bool) (EventLoop.cc:36)
+          n1: 100272 0x30047C: EventLoop::runOnce() (EventLoop.cc:115)
+           n1: 100272 0x300587: EventLoop::run() (EventLoop.cc:83)
+            n1: 100272 0x36E388: SquidMain(int, char**) (main.cc:1707)
+             n1: 100272 0x25CF10: SquidMainSafe (main.cc:1415)
+              n0: 100272 0x25CF10: main (main.cc:1403)
+     n0: 66848 in 1 place, below massif's threshold (1.00%)
+ n1: 165600 0x52A9271: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+  n1: 165600 0x52A930E: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+   n1: 165600 0x52D0009: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+    n2: 165600 0x52BC4C3: SSL_do_handshake (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+     n1: 99360 0x29538E: tlsAttemptHandshake(ConnStateData*, void (*)(int, void*)) (client_side.cc:2554)
+      n1: 99360 0x299D07: clientNegotiateSSL(int, void*) (client_side.cc:2620)
+       n1: 99360 0x50F34C: Comm::DoSelect(int) (ModEpoll.cc:268)
+        n1: 99360 0x4B944D: CommSelectEngine::checkEvents(int) (comm.cc:1847)
+         n1: 99360 0x3002A7: EventLoop::checkEngine(AsyncEngine*, bool) (EventLoop.cc:36)
+          n1: 99360 0x30047C: EventLoop::runOnce() (EventLoop.cc:115)
+           n1: 99360 0x300587: EventLoop::run() (EventLoop.cc:83)
+            n1: 99360 0x36E388: SquidMain(int, char**) (main.cc:1707)
+             n1: 99360 0x25CF10: SquidMainSafe (main.cc:1415)
+              n0: 99360 0x25CF10: main (main.cc:1403)
+     n0: 66240 in 1 place, below massif's threshold (1.00%)
+ n1: 139172 0x568BE58: CRYPTO_zalloc (in /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1)
+  n0: 139172 in 86 places, all below massif's threshold (1.00%)
+ n2: 88288 0x55DFE27: BUF_MEM_grow (in /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1)
+  n2: 87392 0x52D07FF: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+   n2: 87392 0x52BC4C3: SSL_do_handshake (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+    n1: 87392 0x52A0EF: Security::PeerConnector::negotiate() (PeerConnector.cc:189)
+     n1: 87392 0x52B4D7: Security::PeerConnector::start() (PeerConnector.cc:65)
+      n1: 87392 0x4AD1B1: JobDialer<AsyncJob>::dial(AsyncCall&) (AsyncJobCalls.h:174)
+       n1: 87392 0x4A87B8: AsyncCall::make() (AsyncCall.cc:40)
+        n1: 87392 0x4A9DD7: AsyncCallQueue::fireNext() (AsyncCallQueue.cc:56)
+         n1: 87392 0x4AA158: AsyncCallQueue::fire() (AsyncCallQueue.cc:42)
+          n1: 87392 0x300498: dispatchCalls (EventLoop.cc:144)
+           n1: 87392 0x300498: EventLoop::runOnce() (EventLoop.cc:121)
+            n1: 87392 0x300587: EventLoop::run() (EventLoop.cc:83)
+             n1: 87392 0x36E388: SquidMain(int, char**) (main.cc:1707)
+              n1: 87392 0x25CF10: SquidMainSafe (main.cc:1415)
+               n0: 87392 0x25CF10: main (main.cc:1403)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 896 in 5 places, all below massif's threshold (1.00%)
+ n2: 80856 0x568A105: OPENSSL_LH_insert (in /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1)
+  n1: 75432 0x56687F2: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1)
+   n0: 75432 in 5 places, all below massif's threshold (1.00%)
+  n0: 5424 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=28
+#-----------
+time=74370
+mem_heap_B=7100563
+mem_heap_extra_B=250893
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=76338
+mem_heap_B=7100254
+mem_heap_extra_B=251426
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=78306
+mem_heap_B=7111954
+mem_heap_extra_B=251894
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=80274
+mem_heap_B=7100691
+mem_heap_extra_B=250725
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=82242
+mem_heap_B=7098413
+mem_heap_extra_B=251139
+mem_stacks_B=0
+heap_tree=detailed
+n10: 7098413 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n6: 3882704 0x66B487: xcalloc (xalloc.cc:83)
+  n10: 2916944 0x3AC83F: StatHist::init(unsigned int, double (*)(double), double (*)(double), double, double) (StatHist.cc:37)
+   n1: 321600 0x3A17C3: statCountersInitSpecial (stat.cc:1225)
+    n3: 321600 0x3A17C3: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A17DD: statCountersInitSpecial (stat.cc:1226)
+    n3: 321600 0x3A17DD: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A17FA: statCountersInitSpecial (stat.cc:1227)
+    n3: 321600 0x3A17FA: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A1817: statCountersInitSpecial (stat.cc:1228)
+    n3: 321600 0x3A1817: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A1834: statCountersInitSpecial (stat.cc:1229)
+    n3: 321600 0x3A1834: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A1851: statCountersInitSpecial (stat.cc:1233)
+    n3: 321600 0x3A1851: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A186E: statCountersInitSpecial (stat.cc:1234)
+    n3: 321600 0x3A186E: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A188B: statCountersInitSpecial (stat.cc:1238)
+    n3: 321600 0x3A188B: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 277648 0x3A18E1: statCountersInitSpecial (stat.cc:1246)
+    n3: 277648 0x3A18E1: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 149184 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 149184 0x36E986: mainInitialize (main.cc:1239)
+       n1: 149184 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 149184 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 149184 0x25CF10: main (main.cc:1403)
+     n1: 126392 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 126392 0x36E986: mainInitialize (main.cc:1239)
+       n1: 126392 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 126392 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 126392 0x25CF10: main (main.cc:1403)
+     n0: 2072 in 1 place, below massif's threshold (1.00%)
+   n0: 66496 in 9 places, all below massif's threshold (1.00%)
+  n1: 414400 0x4B40C9: comm_init() (comm.cc:1223)
+   n1: 414400 0x36E05C: SquidMain(int, char**) (main.cc:1651)
+    n1: 414400 0x25CF10: SquidMainSafe (main.cc:1415)
+     n0: 414400 0x25CF10: main (main.cc:1403)
+  n1: 262140 0x5BCE67: MemBlob::memAlloc(unsigned int) (MemBlob.cc:94)
+   n1: 262140 0x5BD4D9: MemBlob::MemBlob(unsigned int) (MemBlob.cc:57)
+    n1: 262140 0x5C1AF0: SBuf::reAlloc(unsigned int) (SBuf.cc:859)
+     n2: 262140 0x5C1FBD: SBuf::cow(unsigned int) (SBuf.cc:895)
+      n1: 262140 0x5C27F2: SBuf::rawSpace(unsigned int) (SBuf.cc:173)
+       n1: 262140 0x5C2BB5: SBuf::rawAppendStart(unsigned int) (SBuf.cc:138)
+        n1: 262140 0x53C040: Ssl::ServerBio::readAndBuffer(bio_st*) (bio.cc:335)
+         n1: 262140 0x53C2A1: Ssl::ServerBio::readAndParse(char*, int, bio_st*) (bio.cc:303)
+          n1: 262140 0x55BDFB9: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1)
+           n1: 262140 0x55BCE52: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1)
+            n1: 262140 0x55BD402: BIO_read (in /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1)
+             n1: 262140 0x52A6912: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+              n1: 262140 0x52AAFBC: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+               n1: 262140 0x52A86C1: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+                n1: 262140 0x52DA6F7: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+                 n1: 262140 0x52D062C: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+                  n1: 262140 0x52BC4C3: SSL_do_handshake (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+                   n1: 262140 0x52A0EF: Security::PeerConnector::negotiate() (PeerConnector.cc:189)
+                    n1: 262140 0x52B4D7: Security::PeerConnector::start() (PeerConnector.cc:65)
+                     n1: 262140 0x4AD1B1: JobDialer<AsyncJob>::dial(AsyncCall&) (AsyncJobCalls.h:174)
+                      n1: 262140 0x4A87B8: AsyncCall::make() (AsyncCall.cc:40)
+                       n1: 262140 0x4A9DD7: AsyncCallQueue::fireNext() (AsyncCallQueue.cc:56)
+                        n1: 262140 0x4AA158: AsyncCallQueue::fire() (AsyncCallQueue.cc:42)
+                         n1: 262140 0x300498: dispatchCalls (EventLoop.cc:144)
+                          n1: 262140 0x300498: EventLoop::runOnce() (EventLoop.cc:121)
+                           n1: 262140 0x300587: EventLoop::run() (EventLoop.cc:83)
+                            n1: 262140 0x36E388: SquidMain(int, char**) (main.cc:1707)
+                             n1: 262140 0x25CF10: SquidMainSafe (main.cc:1415)
+                              n0: 262140 0x25CF10: main (main.cc:1403)
+      n0: 0 in 1 place, below massif's threshold (1.00%)
+  n1: 124320 0x50E054: Comm::CallbackTableInit() (IoCallback.cc:25)
+   n1: 124320 0x4B40F4: comm_init() (comm.cc:1230)
+    n1: 124320 0x36E05C: SquidMain(int, char**) (main.cc:1651)
+     n1: 124320 0x25CF10: SquidMainSafe (main.cc:1415)
+      n0: 124320 0x25CF10: main (main.cc:1403)
+  n0: 88484 in 19 places, all below massif's threshold (1.00%)
+  n1: 76416 0x666EF6: hash_create (hash.cc:117)
+   n0: 76416 in 7 places, all below massif's threshold (1.00%)
+ n3: 1205809 0x66B50C: xmalloc (xalloc.cc:114)
+  n4: 737704 0x65D684: MemPoolMalloc::allocate() (PoolMalloc.cc:37)
+   n0: 245288 in 39 places, all below massif's threshold (1.00%)
+   n1: 223344 0x3B04A6: operator new (mem_node.h:19)
+    n1: 223344 0x3B04A6: mem_hdr::nodeToRecieve(long) (stmem.cc:312)
+     n1: 223344 0x3B113D: mem_hdr::write(StoreIOBuffer const&) (stmem.cc:361)
+      n1: 223344 0x3710EF: MemObject::write(StoreIOBuffer const&) (MemObject.cc:158)
+       n1: 223344 0x3B74C7: StoreEntry::write(StoreIOBuffer) (store.cc:829)
+        n1: 223344 0x3B1AD8: StoreEntry::append(char const*, int) (store.cc:855)
+         n1: 223344 0x355D5C: HttpReply::packHeadersUsingSlowPacker(Packable&) const (HttpReply.cc:98)
+          n2: 223344 0x3B5315: StoreEntry::startWriting() (store.cc:1834)
+           n1: 210936 0x3B5557: StoreEntry::replaceHttpReply(HttpReply*, bool) (store.cc:1817)
+            n1: 210936 0x373836: MimeIcon::created(StoreEntry*) (mime.cc:423)
+             n1: 210936 0x3743F5: MimeIcon::load() (mime.cc:357)
+              n1: 210936 0x374A98: mimeInit(char*) (mime.cc:332)
+               n1: 210936 0x36E99C: mainInitialize (main.cc:1242)
+                n1: 210936 0x36E99C: SquidMain(int, char**) (main.cc:1666)
+                 n1: 210936 0x25CF10: SquidMainSafe (main.cc:1415)
+                  n0: 210936 0x25CF10: main (main.cc:1403)
+           n0: 12408 in 1 place, below massif's threshold (1.00%)
+   n1: 160032 0x5BCE67: MemBlob::memAlloc(unsigned int) (MemBlob.cc:94)
+    n2: 160032 0x5BD4D9: MemBlob::MemBlob(unsigned int) (MemBlob.cc:57)
+     n1: 159992 0x5C1AF0: SBuf::reAlloc(unsigned int) (SBuf.cc:859)
+      n2: 159992 0x5C1FBD: SBuf::cow(unsigned int) (SBuf.cc:895)
+       n2: 139264 0x5C2364: SBuf::reserveCapacity(unsigned int) (SBuf.cc:108)
+        n1: 114688 0x5195DF: AnyP::Uri::absolute() const (Uri.cc:492)
+         n1: 114688 0x3599B8: HttpRequest::canonicalCleanUrl() const (HttpRequest.cc:679)
+          n1: 114688 0x2C68A6: ClientHttpRequest::setLogUriToRequestUri() (client_side_request.cc:1909)
+           n1: 114688 0x2C7453: ClientHttpRequest::initRequest(HttpRequest*) (client_side_request.cc:1654)
+            n1: 114688 0x48C16B: Http::One::Server::buildHttpRequest(RefCount<Http::Stream>&) (Http1Server.cc:193)
+             n1: 114688 0x48D7D1: Http::One::Server::processParsedRequest(RefCount<Http::Stream>&) (Http1Server.cc:227)
+              n1: 114688 0x2AC7EF: ConnStateData::clientParseRequests() (client_side.cc:2114)
+               n1: 114688 0x2B30F5: ConnStateData::afterClientRead() (client_side.cc:2148)
+                n1: 114688 0x492E4F: Server::doClientRead(CommIoCbParams const&) (Server.cc:176)
+                 n1: 114688 0x493E49: doDial (CommCalls.h:205)
+                  n1: 114688 0x493E49: JobDialer<Server>::dial(AsyncCall&) (AsyncJobCalls.h:174)
+                   n1: 114688 0x4A87B8: AsyncCall::make() (AsyncCall.cc:40)
+                    n1: 114688 0x4A9DD7: AsyncCallQueue::fireNext() (AsyncCallQueue.cc:56)
+                     n1: 114688 0x4AA158: AsyncCallQueue::fire() (AsyncCallQueue.cc:42)
+                      n1: 114688 0x300498: dispatchCalls (EventLoop.cc:144)
+                       n1: 114688 0x300498: EventLoop::runOnce() (EventLoop.cc:121)
+                        n1: 114688 0x300587: EventLoop::run() (EventLoop.cc:83)
+                         n1: 114688 0x36E388: SquidMain(int, char**) (main.cc:1707)
+                          n1: 114688 0x25CF10: SquidMainSafe (main.cc:1415)
+                           n0: 114688 0x25CF10: main (main.cc:1403)
+        n0: 24576 in 1 place, below massif's threshold (1.00%)
+       n0: 20728 in 1 place, below massif's threshold (1.00%)
+     n0: 40 in 1 place, below massif's threshold (1.00%)
+   n1: 109040 0x35C509: operator new (HttpRequest.h:49)
+    n2: 109040 0x35C509: HttpRequest::FromUrl(char const*, RefCount<MasterXaction> const&, HttpRequestMethod const&) (HttpRequest.cc:524)
+     n1: 95880 0x37366F: MimeIcon::created(StoreEntry*) (mime.cc:405)
+      n1: 95880 0x3743F5: MimeIcon::load() (mime.cc:357)
+       n1: 95880 0x374A98: mimeInit(char*) (mime.cc:332)
+        n1: 95880 0x36E99C: mainInitialize (main.cc:1242)
+         n1: 95880 0x36E99C: SquidMain(int, char**) (main.cc:1666)
+          n1: 95880 0x25CF10: SquidMainSafe (main.cc:1415)
+           n0: 95880 0x25CF10: main (main.cc:1403)
+     n0: 13160 in 1 place, below massif's threshold (1.00%)
+  n1: 393216 0x50ECBD: Comm::SelectLoopInit() (ModEpoll.cc:69)
+   n1: 393216 0x36E05C: SquidMain(int, char**) (main.cc:1651)
+    n1: 393216 0x25CF10: SquidMainSafe (main.cc:1415)
+     n0: 393216 0x25CF10: main (main.cc:1403)
+  n0: 74889 in 11 places, all below massif's threshold (1.00%)
+ n0: 610224 in 339 places, all below massif's threshold (1.00%)
+ n1: 483328 0x68223BF: build_trtable (regexec.c:3398)
+  n1: 483328 0x682D187: transit_state (regexec.c:2253)
+   n1: 483328 0x682D187: check_matching (regexec.c:1118)
+    n1: 483328 0x682D187: re_search_internal (regexec.c:790)
+     n2: 483328 0x682E7F9: regexec@@GLIBC_2.3.4 (regexec.c:220)
+      n1: 481280 0x373006: mimeGetEntry(char const*, int) (mime.cc:92)
+       n1: 481280 0x37339A: mimeGetContentType(char const*) (mime.cc:177)
+        n1: 481280 0x3743AD: MimeIcon::load() (mime.cc:352)
+         n1: 481280 0x374A98: mimeInit(char*) (mime.cc:332)
+          n1: 481280 0x36E99C: mainInitialize (main.cc:1242)
+           n1: 481280 0x36E99C: SquidMain(int, char**) (main.cc:1666)
+            n1: 481280 0x25CF10: SquidMainSafe (main.cc:1415)
+             n0: 481280 0x25CF10: main (main.cc:1403)
+      n0: 2048 in 1 place, below massif's threshold (1.00%)
+ n1: 262184 0x25C5A2: __static_initialization_and_destruction_0 (FwdState.cc:78)
+  n1: 262184 0x25C5A2: _GLOBAL__sub_I__ZN8FwdState15CBDATA_FwdStateE (FwdState.cc:1343)
+   n1: 262184 0x66B93C: __libc_csu_init (in /usr/local/squid/sbin/squid)
+    n0: 262184 0x674EB27: (below main) (libc-start.c:266)
+ n1: 167120 0x52A915B: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+  n1: 167120 0x52A92F8: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+   n1: 167120 0x52D0009: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+    n2: 167120 0x52BC4C3: SSL_do_handshake (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+     n1: 100272 0x29538E: tlsAttemptHandshake(ConnStateData*, void (*)(int, void*)) (client_side.cc:2554)
+      n1: 100272 0x299D07: clientNegotiateSSL(int, void*) (client_side.cc:2620)
+       n1: 100272 0x50F34C: Comm::DoSelect(int) (ModEpoll.cc:268)
+        n1: 100272 0x4B944D: CommSelectEngine::checkEvents(int) (comm.cc:1847)
+         n1: 100272 0x3002A7: EventLoop::checkEngine(AsyncEngine*, bool) (EventLoop.cc:36)
+          n1: 100272 0x30047C: EventLoop::runOnce() (EventLoop.cc:115)
+           n1: 100272 0x300587: EventLoop::run() (EventLoop.cc:83)
+            n1: 100272 0x36E388: SquidMain(int, char**) (main.cc:1707)
+             n1: 100272 0x25CF10: SquidMainSafe (main.cc:1415)
+              n0: 100272 0x25CF10: main (main.cc:1403)
+     n0: 66848 in 1 place, below massif's threshold (1.00%)
+ n1: 165600 0x52A9271: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+  n1: 165600 0x52A930E: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+   n1: 165600 0x52D0009: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+    n2: 165600 0x52BC4C3: SSL_do_handshake (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+     n1: 99360 0x29538E: tlsAttemptHandshake(ConnStateData*, void (*)(int, void*)) (client_side.cc:2554)
+      n1: 99360 0x299D07: clientNegotiateSSL(int, void*) (client_side.cc:2620)
+       n1: 99360 0x50F34C: Comm::DoSelect(int) (ModEpoll.cc:268)
+        n1: 99360 0x4B944D: CommSelectEngine::checkEvents(int) (comm.cc:1847)
+         n1: 99360 0x3002A7: EventLoop::checkEngine(AsyncEngine*, bool) (EventLoop.cc:36)
+          n1: 99360 0x30047C: EventLoop::runOnce() (EventLoop.cc:115)
+           n1: 99360 0x300587: EventLoop::run() (EventLoop.cc:83)
+            n1: 99360 0x36E388: SquidMain(int, char**) (main.cc:1707)
+             n1: 99360 0x25CF10: SquidMainSafe (main.cc:1415)
+              n0: 99360 0x25CF10: main (main.cc:1403)
+     n0: 66240 in 1 place, below massif's threshold (1.00%)
+ n1: 130516 0x568BE58: CRYPTO_zalloc (in /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1)
+  n0: 130516 in 86 places, all below massif's threshold (1.00%)
+ n2: 110072 0x55DFE27: BUF_MEM_grow (in /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1)
+  n2: 109240 0x52D07FF: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+   n2: 109240 0x52BC4C3: SSL_do_handshake (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+    n1: 87392 0x52A0EF: Security::PeerConnector::negotiate() (PeerConnector.cc:189)
+     n1: 87392 0x52B4D7: Security::PeerConnector::start() (PeerConnector.cc:65)
+      n1: 87392 0x4AD1B1: JobDialer<AsyncJob>::dial(AsyncCall&) (AsyncJobCalls.h:174)
+       n1: 87392 0x4A87B8: AsyncCall::make() (AsyncCall.cc:40)
+        n1: 87392 0x4A9DD7: AsyncCallQueue::fireNext() (AsyncCallQueue.cc:56)
+         n1: 87392 0x4AA158: AsyncCallQueue::fire() (AsyncCallQueue.cc:42)
+          n1: 87392 0x300498: dispatchCalls (EventLoop.cc:144)
+           n1: 87392 0x300498: EventLoop::runOnce() (EventLoop.cc:121)
+            n1: 87392 0x300587: EventLoop::run() (EventLoop.cc:83)
+             n1: 87392 0x36E388: SquidMain(int, char**) (main.cc:1707)
+              n1: 87392 0x25CF10: SquidMainSafe (main.cc:1415)
+               n0: 87392 0x25CF10: main (main.cc:1403)
+    n0: 21848 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 832 in 5 places, all below massif's threshold (1.00%)
+ n2: 80856 0x568A105: OPENSSL_LH_insert (in /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1)
+  n1: 75432 0x56687F2: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1)
+   n0: 75432 in 5 places, all below massif's threshold (1.00%)
+  n0: 5424 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=33
+#-----------
+time=84210
+mem_heap_B=7102731
+mem_heap_extra_B=250981
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=86178
+mem_heap_B=7101901
+mem_heap_extra_B=250843
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=88146
+mem_heap_B=7102963
+mem_heap_extra_B=250933
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=90114
+mem_heap_B=7134021
+mem_heap_extra_B=251123
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=92082
+mem_heap_B=7134474
+mem_heap_extra_B=250702
+mem_stacks_B=0
+heap_tree=detailed
+n9: 7134474 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n6: 4013776 0x66B487: xcalloc (xalloc.cc:83)
+  n10: 2916944 0x3AC83F: StatHist::init(unsigned int, double (*)(double), double (*)(double), double, double) (StatHist.cc:37)
+   n1: 321600 0x3A17C3: statCountersInitSpecial (stat.cc:1225)
+    n3: 321600 0x3A17C3: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A17DD: statCountersInitSpecial (stat.cc:1226)
+    n3: 321600 0x3A17DD: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A17FA: statCountersInitSpecial (stat.cc:1227)
+    n3: 321600 0x3A17FA: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A1817: statCountersInitSpecial (stat.cc:1228)
+    n3: 321600 0x3A1817: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A1834: statCountersInitSpecial (stat.cc:1229)
+    n3: 321600 0x3A1834: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A1851: statCountersInitSpecial (stat.cc:1233)
+    n3: 321600 0x3A1851: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A186E: statCountersInitSpecial (stat.cc:1234)
+    n3: 321600 0x3A186E: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A188B: statCountersInitSpecial (stat.cc:1238)
+    n3: 321600 0x3A188B: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 277648 0x3A18E1: statCountersInitSpecial (stat.cc:1246)
+    n3: 277648 0x3A18E1: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 149184 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 149184 0x36E986: mainInitialize (main.cc:1239)
+       n1: 149184 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 149184 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 149184 0x25CF10: main (main.cc:1403)
+     n1: 126392 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 126392 0x36E986: mainInitialize (main.cc:1239)
+       n1: 126392 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 126392 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 126392 0x25CF10: main (main.cc:1403)
+     n0: 2072 in 1 place, below massif's threshold (1.00%)
+   n0: 66496 in 9 places, all below massif's threshold (1.00%)
+  n1: 414400 0x4B40C9: comm_init() (comm.cc:1223)
+   n1: 414400 0x36E05C: SquidMain(int, char**) (main.cc:1651)
+    n1: 414400 0x25CF10: SquidMainSafe (main.cc:1415)
+     n0: 414400 0x25CF10: main (main.cc:1403)
+  n1: 393212 0x5BCE67: MemBlob::memAlloc(unsigned int) (MemBlob.cc:94)
+   n1: 393212 0x5BD4D9: MemBlob::MemBlob(unsigned int) (MemBlob.cc:57)
+    n1: 393212 0x5C1AF0: SBuf::reAlloc(unsigned int) (SBuf.cc:859)
+     n2: 393212 0x5C1FBD: SBuf::cow(unsigned int) (SBuf.cc:895)
+      n1: 262140 0x5C27F2: SBuf::rawSpace(unsigned int) (SBuf.cc:173)
+       n1: 262140 0x5C2BB5: SBuf::rawAppendStart(unsigned int) (SBuf.cc:138)
+        n1: 262140 0x53C040: Ssl::ServerBio::readAndBuffer(bio_st*) (bio.cc:335)
+         n1: 262140 0x53C2A1: Ssl::ServerBio::readAndParse(char*, int, bio_st*) (bio.cc:303)
+          n1: 262140 0x55BDFB9: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1)
+           n1: 262140 0x55BCE52: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1)
+            n1: 262140 0x55BD402: BIO_read (in /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1)
+             n1: 262140 0x52A6912: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+              n1: 262140 0x52AAFBC: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+               n1: 262140 0x52A86C1: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+                n1: 262140 0x52DA6F7: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+                 n1: 262140 0x52D062C: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+                  n1: 262140 0x52BC4C3: SSL_do_handshake (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+                   n1: 262140 0x52A0EF: Security::PeerConnector::negotiate() (PeerConnector.cc:189)
+                    n1: 262140 0x52B4D7: Security::PeerConnector::start() (PeerConnector.cc:65)
+                     n1: 262140 0x4AD1B1: JobDialer<AsyncJob>::dial(AsyncCall&) (AsyncJobCalls.h:174)
+                      n1: 262140 0x4A87B8: AsyncCall::make() (AsyncCall.cc:40)
+                       n1: 262140 0x4A9DD7: AsyncCallQueue::fireNext() (AsyncCallQueue.cc:56)
+                        n1: 262140 0x4AA158: AsyncCallQueue::fire() (AsyncCallQueue.cc:42)
+                         n1: 262140 0x300498: dispatchCalls (EventLoop.cc:144)
+                          n1: 262140 0x300498: EventLoop::runOnce() (EventLoop.cc:121)
+                           n1: 262140 0x300587: EventLoop::run() (EventLoop.cc:83)
+                            n1: 262140 0x36E388: SquidMain(int, char**) (main.cc:1707)
+                             n1: 262140 0x25CF10: SquidMainSafe (main.cc:1415)
+                              n0: 262140 0x25CF10: main (main.cc:1403)
+      n1: 131072 0x5C2364: SBuf::reserveCapacity(unsigned int) (SBuf.cc:108)
+       n1: 131072 0x341B56: SBuf::reserveSpace(unsigned int) (SBuf.h:434)
+        n1: 131072 0x33E56D: HttpStateData::maybeMakeSpaceAvailable(bool) (http.cc:1566)
+         n1: 131072 0x33E789: HttpStateData::maybeReadVirginBody() (http.cc:1519)
+          n0: 131072 in 4 places, all below massif's threshold (1.00%)
+  n1: 124320 0x50E054: Comm::CallbackTableInit() (IoCallback.cc:25)
+   n1: 124320 0x4B40F4: comm_init() (comm.cc:1230)
+    n1: 124320 0x36E05C: SquidMain(int, char**) (main.cc:1651)
+     n1: 124320 0x25CF10: SquidMainSafe (main.cc:1415)
+      n0: 124320 0x25CF10: main (main.cc:1403)
+  n0: 88484 in 19 places, all below massif's threshold (1.00%)
+  n1: 76416 0x666EF6: hash_create (hash.cc:117)
+   n0: 76416 in 7 places, all below massif's threshold (1.00%)
+ n3: 1205809 0x66B50C: xmalloc (xalloc.cc:114)
+  n4: 737704 0x65D684: MemPoolMalloc::allocate() (PoolMalloc.cc:37)
+   n0: 245288 in 39 places, all below massif's threshold (1.00%)
+   n1: 223344 0x3B04A6: operator new (mem_node.h:19)
+    n1: 223344 0x3B04A6: mem_hdr::nodeToRecieve(long) (stmem.cc:312)
+     n1: 223344 0x3B113D: mem_hdr::write(StoreIOBuffer const&) (stmem.cc:361)
+      n1: 223344 0x3710EF: MemObject::write(StoreIOBuffer const&) (MemObject.cc:158)
+       n1: 223344 0x3B74C7: StoreEntry::write(StoreIOBuffer) (store.cc:829)
+        n1: 223344 0x3B1AD8: StoreEntry::append(char const*, int) (store.cc:855)
+         n1: 223344 0x355D5C: HttpReply::packHeadersUsingSlowPacker(Packable&) const (HttpReply.cc:98)
+          n2: 223344 0x3B5315: StoreEntry::startWriting() (store.cc:1834)
+           n1: 210936 0x3B5557: StoreEntry::replaceHttpReply(HttpReply*, bool) (store.cc:1817)
+            n1: 210936 0x373836: MimeIcon::created(StoreEntry*) (mime.cc:423)
+             n1: 210936 0x3743F5: MimeIcon::load() (mime.cc:357)
+              n1: 210936 0x374A98: mimeInit(char*) (mime.cc:332)
+               n1: 210936 0x36E99C: mainInitialize (main.cc:1242)
+                n1: 210936 0x36E99C: SquidMain(int, char**) (main.cc:1666)
+                 n1: 210936 0x25CF10: SquidMainSafe (main.cc:1415)
+                  n0: 210936 0x25CF10: main (main.cc:1403)
+           n0: 12408 in 1 place, below massif's threshold (1.00%)
+   n1: 160032 0x5BCE67: MemBlob::memAlloc(unsigned int) (MemBlob.cc:94)
+    n2: 160032 0x5BD4D9: MemBlob::MemBlob(unsigned int) (MemBlob.cc:57)
+     n1: 159992 0x5C1AF0: SBuf::reAlloc(unsigned int) (SBuf.cc:859)
+      n2: 159992 0x5C1FBD: SBuf::cow(unsigned int) (SBuf.cc:895)
+       n2: 139264 0x5C2364: SBuf::reserveCapacity(unsigned int) (SBuf.cc:108)
+        n1: 114688 0x5195DF: AnyP::Uri::absolute() const (Uri.cc:492)
+         n1: 114688 0x3599B8: HttpRequest::canonicalCleanUrl() const (HttpRequest.cc:679)
+          n1: 114688 0x2C68A6: ClientHttpRequest::setLogUriToRequestUri() (client_side_request.cc:1909)
+           n1: 114688 0x2C7453: ClientHttpRequest::initRequest(HttpRequest*) (client_side_request.cc:1654)
+            n1: 114688 0x48C16B: Http::One::Server::buildHttpRequest(RefCount<Http::Stream>&) (Http1Server.cc:193)
+             n1: 114688 0x48D7D1: Http::One::Server::processParsedRequest(RefCount<Http::Stream>&) (Http1Server.cc:227)
+              n1: 114688 0x2AC7EF: ConnStateData::clientParseRequests() (client_side.cc:2114)
+               n1: 114688 0x2B30F5: ConnStateData::afterClientRead() (client_side.cc:2148)
+                n1: 114688 0x492E4F: Server::doClientRead(CommIoCbParams const&) (Server.cc:176)
+                 n1: 114688 0x493E49: doDial (CommCalls.h:205)
+                  n1: 114688 0x493E49: JobDialer<Server>::dial(AsyncCall&) (AsyncJobCalls.h:174)
+                   n1: 114688 0x4A87B8: AsyncCall::make() (AsyncCall.cc:40)
+                    n1: 114688 0x4A9DD7: AsyncCallQueue::fireNext() (AsyncCallQueue.cc:56)
+                     n1: 114688 0x4AA158: AsyncCallQueue::fire() (AsyncCallQueue.cc:42)
+                      n1: 114688 0x300498: dispatchCalls (EventLoop.cc:144)
+                       n1: 114688 0x300498: EventLoop::runOnce() (EventLoop.cc:121)
+                        n1: 114688 0x300587: EventLoop::run() (EventLoop.cc:83)
+                         n1: 114688 0x36E388: SquidMain(int, char**) (main.cc:1707)
+                          n1: 114688 0x25CF10: SquidMainSafe (main.cc:1415)
+                           n0: 114688 0x25CF10: main (main.cc:1403)
+        n0: 24576 in 1 place, below massif's threshold (1.00%)
+       n0: 20728 in 1 place, below massif's threshold (1.00%)
+     n0: 40 in 1 place, below massif's threshold (1.00%)
+   n1: 109040 0x35C509: operator new (HttpRequest.h:49)
+    n2: 109040 0x35C509: HttpRequest::FromUrl(char const*, RefCount<MasterXaction> const&, HttpRequestMethod const&) (HttpRequest.cc:524)
+     n1: 95880 0x37366F: MimeIcon::created(StoreEntry*) (mime.cc:405)
+      n1: 95880 0x3743F5: MimeIcon::load() (mime.cc:357)
+       n1: 95880 0x374A98: mimeInit(char*) (mime.cc:332)
+        n1: 95880 0x36E99C: mainInitialize (main.cc:1242)
+         n1: 95880 0x36E99C: SquidMain(int, char**) (main.cc:1666)
+          n1: 95880 0x25CF10: SquidMainSafe (main.cc:1415)
+           n0: 95880 0x25CF10: main (main.cc:1403)
+     n0: 13160 in 1 place, below massif's threshold (1.00%)
+  n1: 393216 0x50ECBD: Comm::SelectLoopInit() (ModEpoll.cc:69)
+   n1: 393216 0x36E05C: SquidMain(int, char**) (main.cc:1651)
+    n1: 393216 0x25CF10: SquidMainSafe (main.cc:1415)
+     n0: 393216 0x25CF10: main (main.cc:1403)
+  n0: 74889 in 11 places, all below massif's threshold (1.00%)
+ n0: 660357 in 340 places, all below massif's threshold (1.00%)
+ n1: 483328 0x68223BF: build_trtable (regexec.c:3398)
+  n1: 483328 0x682D187: transit_state (regexec.c:2253)
+   n1: 483328 0x682D187: check_matching (regexec.c:1118)
+    n1: 483328 0x682D187: re_search_internal (regexec.c:790)
+     n2: 483328 0x682E7F9: regexec@@GLIBC_2.3.4 (regexec.c:220)
+      n1: 481280 0x373006: mimeGetEntry(char const*, int) (mime.cc:92)
+       n1: 481280 0x37339A: mimeGetContentType(char const*) (mime.cc:177)
+        n1: 481280 0x3743AD: MimeIcon::load() (mime.cc:352)
+         n1: 481280 0x374A98: mimeInit(char*) (mime.cc:332)
+          n1: 481280 0x36E99C: mainInitialize (main.cc:1242)
+           n1: 481280 0x36E99C: SquidMain(int, char**) (main.cc:1666)
+            n1: 481280 0x25CF10: SquidMainSafe (main.cc:1415)
+             n0: 481280 0x25CF10: main (main.cc:1403)
+      n0: 2048 in 1 place, below massif's threshold (1.00%)
+ n1: 262184 0x25C5A2: __static_initialization_and_destruction_0 (FwdState.cc:78)
+  n1: 262184 0x25C5A2: _GLOBAL__sub_I__ZN8FwdState15CBDATA_FwdStateE (FwdState.cc:1343)
+   n1: 262184 0x66B93C: __libc_csu_init (in /usr/local/squid/sbin/squid)
+    n0: 262184 0x674EB27: (below main) (libc-start.c:266)
+ n1: 150408 0x52A915B: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+  n1: 150408 0x52A92F8: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+   n1: 150408 0x52D0009: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+    n2: 150408 0x52BC4C3: SSL_do_handshake (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+     n1: 83560 0x29538E: tlsAttemptHandshake(ConnStateData*, void (*)(int, void*)) (client_side.cc:2554)
+      n1: 83560 0x299D07: clientNegotiateSSL(int, void*) (client_side.cc:2620)
+       n1: 83560 0x50F34C: Comm::DoSelect(int) (ModEpoll.cc:268)
+        n1: 83560 0x4B944D: CommSelectEngine::checkEvents(int) (comm.cc:1847)
+         n1: 83560 0x3002A7: EventLoop::checkEngine(AsyncEngine*, bool) (EventLoop.cc:36)
+          n1: 83560 0x30047C: EventLoop::runOnce() (EventLoop.cc:115)
+           n1: 83560 0x300587: EventLoop::run() (EventLoop.cc:83)
+            n1: 83560 0x36E388: SquidMain(int, char**) (main.cc:1707)
+             n1: 83560 0x25CF10: SquidMainSafe (main.cc:1415)
+              n0: 83560 0x25CF10: main (main.cc:1403)
+     n0: 66848 in 1 place, below massif's threshold (1.00%)
+ n1: 149040 0x52A9271: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+  n1: 149040 0x52A930E: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+   n1: 149040 0x52D0009: ??? (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+    n2: 149040 0x52BC4C3: SSL_do_handshake (in /usr/lib/x86_64-linux-gnu/libssl.so.1.1)
+     n1: 82800 0x29538E: tlsAttemptHandshake(ConnStateData*, void (*)(int, void*)) (client_side.cc:2554)
+      n1: 82800 0x299D07: clientNegotiateSSL(int, void*) (client_side.cc:2620)
+       n1: 82800 0x50F34C: Comm::DoSelect(int) (ModEpoll.cc:268)
+        n1: 82800 0x4B944D: CommSelectEngine::checkEvents(int) (comm.cc:1847)
+         n1: 82800 0x3002A7: EventLoop::checkEngine(AsyncEngine*, bool) (EventLoop.cc:36)
+          n1: 82800 0x30047C: EventLoop::runOnce() (EventLoop.cc:115)
+           n1: 82800 0x300587: EventLoop::run() (EventLoop.cc:83)
+            n1: 82800 0x36E388: SquidMain(int, char**) (main.cc:1707)
+             n1: 82800 0x25CF10: SquidMainSafe (main.cc:1415)
+              n0: 82800 0x25CF10: main (main.cc:1403)
+     n0: 66240 in 1 place, below massif's threshold (1.00%)
+ n1: 128716 0x568BE58: CRYPTO_zalloc (in /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1)
+  n0: 128716 in 86 places, all below massif's threshold (1.00%)
+ n2: 80856 0x568A105: OPENSSL_LH_insert (in /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1)
+  n1: 75432 0x56687F2: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1)
+   n0: 75432 in 5 places, all below massif's threshold (1.00%)
+  n0: 5424 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=38
+#-----------
+time=94050
+mem_heap_B=7203209
+mem_heap_extra_B=251199
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=96018
+mem_heap_B=7199789
+mem_heap_extra_B=251283
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=98148
+mem_heap_B=6222057
+mem_heap_extra_B=244255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=100150
+mem_heap_B=6222057
+mem_heap_extra_B=244255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=102153
+mem_heap_B=6222057
+mem_heap_extra_B=244255
+mem_stacks_B=0
+heap_tree=detailed
+n7: 6222057 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n5: 3620588 0x66B487: xcalloc (xalloc.cc:83)
+  n10: 2916944 0x3AC83F: StatHist::init(unsigned int, double (*)(double), double (*)(double), double, double) (StatHist.cc:37)
+   n1: 321600 0x3A17C3: statCountersInitSpecial (stat.cc:1225)
+    n3: 321600 0x3A17C3: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A17DD: statCountersInitSpecial (stat.cc:1226)
+    n3: 321600 0x3A17DD: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A17FA: statCountersInitSpecial (stat.cc:1227)
+    n3: 321600 0x3A17FA: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A1817: statCountersInitSpecial (stat.cc:1228)
+    n3: 321600 0x3A1817: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A1834: statCountersInitSpecial (stat.cc:1229)
+    n3: 321600 0x3A1834: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A1851: statCountersInitSpecial (stat.cc:1233)
+    n3: 321600 0x3A1851: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A186E: statCountersInitSpecial (stat.cc:1234)
+    n3: 321600 0x3A186E: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A188B: statCountersInitSpecial (stat.cc:1238)
+    n3: 321600 0x3A188B: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 277648 0x3A18E1: statCountersInitSpecial (stat.cc:1246)
+    n3: 277648 0x3A18E1: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 149184 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 149184 0x36E986: mainInitialize (main.cc:1239)
+       n1: 149184 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 149184 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 149184 0x25CF10: main (main.cc:1403)
+     n1: 126392 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 126392 0x36E986: mainInitialize (main.cc:1239)
+       n1: 126392 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 126392 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 126392 0x25CF10: main (main.cc:1403)
+     n0: 2072 in 1 place, below massif's threshold (1.00%)
+   n0: 66496 in 9 places, all below massif's threshold (1.00%)
+  n1: 414400 0x4B40C9: comm_init() (comm.cc:1223)
+   n1: 414400 0x36E05C: SquidMain(int, char**) (main.cc:1651)
+    n1: 414400 0x25CF10: SquidMainSafe (main.cc:1415)
+     n0: 414400 0x25CF10: main (main.cc:1403)
+  n1: 124320 0x50E054: Comm::CallbackTableInit() (IoCallback.cc:25)
+   n1: 124320 0x4B40F4: comm_init() (comm.cc:1230)
+    n1: 124320 0x36E05C: SquidMain(int, char**) (main.cc:1651)
+     n1: 124320 0x25CF10: SquidMainSafe (main.cc:1415)
+      n0: 124320 0x25CF10: main (main.cc:1403)
+  n0: 88508 in 20 places, all below massif's threshold (1.00%)
+  n2: 76416 0x666EF6: hash_create (hash.cc:117)
+   n1: 65536 0x664227: Store::Disks::init() (Disks.cc:268)
+    n1: 65536 0x661CB1: Store::Controller::init() (Controller.cc:65)
+     n1: 65536 0x3B524B: storeInit() (store.cc:1344)
+      n1: 65536 0x36E98B: mainInitialize (main.cc:1240)
+       n1: 65536 0x36E98B: SquidMain(int, char**) (main.cc:1666)
+        n1: 65536 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 65536 0x25CF10: main (main.cc:1403)
+   n0: 10880 in 6 places, all below massif's threshold (1.00%)
+ n4: 1205459 0x66B50C: xmalloc (xalloc.cc:114)
+  n5: 737704 0x65D684: MemPoolMalloc::allocate() (PoolMalloc.cc:37)
+   n1: 223344 0x3B04A6: operator new (mem_node.h:19)
+    n1: 223344 0x3B04A6: mem_hdr::nodeToRecieve(long) (stmem.cc:312)
+     n1: 223344 0x3B113D: mem_hdr::write(StoreIOBuffer const&) (stmem.cc:361)
+      n1: 223344 0x3710EF: MemObject::write(StoreIOBuffer const&) (MemObject.cc:158)
+       n1: 223344 0x3B74C7: StoreEntry::write(StoreIOBuffer) (store.cc:829)
+        n1: 223344 0x3B1AD8: StoreEntry::append(char const*, int) (store.cc:855)
+         n1: 223344 0x355D5C: HttpReply::packHeadersUsingSlowPacker(Packable&) const (HttpReply.cc:98)
+          n2: 223344 0x3B5315: StoreEntry::startWriting() (store.cc:1834)
+           n1: 210936 0x3B5557: StoreEntry::replaceHttpReply(HttpReply*, bool) (store.cc:1817)
+            n1: 210936 0x373836: MimeIcon::created(StoreEntry*) (mime.cc:423)
+             n1: 210936 0x3743F5: MimeIcon::load() (mime.cc:357)
+              n1: 210936 0x374A98: mimeInit(char*) (mime.cc:332)
+               n1: 210936 0x36E99C: mainInitialize (main.cc:1242)
+                n1: 210936 0x36E99C: SquidMain(int, char**) (main.cc:1666)
+                 n1: 210936 0x25CF10: SquidMainSafe (main.cc:1415)
+                  n0: 210936 0x25CF10: main (main.cc:1403)
+           n0: 12408 in 1 place, below massif's threshold (1.00%)
+   n0: 176488 in 38 places, all below massif's threshold (1.00%)
+   n1: 160032 0x5BCE67: MemBlob::memAlloc(unsigned int) (MemBlob.cc:94)
+    n2: 160032 0x5BD4D9: MemBlob::MemBlob(unsigned int) (MemBlob.cc:57)
+     n1: 159992 0x5C1AF0: SBuf::reAlloc(unsigned int) (SBuf.cc:859)
+      n2: 159992 0x5C1FBD: SBuf::cow(unsigned int) (SBuf.cc:895)
+       n2: 139264 0x5C2364: SBuf::reserveCapacity(unsigned int) (SBuf.cc:108)
+        n1: 114688 0x5195DF: AnyP::Uri::absolute() const (Uri.cc:492)
+         n1: 114688 0x3599B8: HttpRequest::canonicalCleanUrl() const (HttpRequest.cc:679)
+          n1: 114688 0x2C68A6: ClientHttpRequest::setLogUriToRequestUri() (client_side_request.cc:1909)
+           n1: 114688 0x2C7453: ClientHttpRequest::initRequest(HttpRequest*) (client_side_request.cc:1654)
+            n1: 114688 0x48C16B: Http::One::Server::buildHttpRequest(RefCount<Http::Stream>&) (Http1Server.cc:193)
+             n1: 114688 0x48D7D1: Http::One::Server::processParsedRequest(RefCount<Http::Stream>&) (Http1Server.cc:227)
+              n1: 114688 0x2AC7EF: ConnStateData::clientParseRequests() (client_side.cc:2114)
+               n1: 114688 0x2B30F5: ConnStateData::afterClientRead() (client_side.cc:2148)
+                n1: 114688 0x492E4F: Server::doClientRead(CommIoCbParams const&) (Server.cc:176)
+                 n1: 114688 0x493E49: doDial (CommCalls.h:205)
+                  n1: 114688 0x493E49: JobDialer<Server>::dial(AsyncCall&) (AsyncJobCalls.h:174)
+                   n1: 114688 0x4A87B8: AsyncCall::make() (AsyncCall.cc:40)
+                    n1: 114688 0x4A9DD7: AsyncCallQueue::fireNext() (AsyncCallQueue.cc:56)
+                     n1: 114688 0x4AA158: AsyncCallQueue::fire() (AsyncCallQueue.cc:42)
+                      n1: 114688 0x300498: dispatchCalls (EventLoop.cc:144)
+                       n1: 114688 0x300498: EventLoop::runOnce() (EventLoop.cc:121)
+                        n1: 114688 0x300587: EventLoop::run() (EventLoop.cc:83)
+                         n1: 114688 0x36E388: SquidMain(int, char**) (main.cc:1707)
+                          n1: 114688 0x25CF10: SquidMainSafe (main.cc:1415)
+                           n0: 114688 0x25CF10: main (main.cc:1403)
+        n0: 24576 in 1 place, below massif's threshold (1.00%)
+       n0: 20728 in 1 place, below massif's threshold (1.00%)
+     n0: 40 in 1 place, below massif's threshold (1.00%)
+   n1: 109040 0x35C509: operator new (HttpRequest.h:49)
+    n2: 109040 0x35C509: HttpRequest::FromUrl(char const*, RefCount<MasterXaction> const&, HttpRequestMethod const&) (HttpRequest.cc:524)
+     n1: 95880 0x37366F: MimeIcon::created(StoreEntry*) (mime.cc:405)
+      n1: 95880 0x3743F5: MimeIcon::load() (mime.cc:357)
+       n1: 95880 0x374A98: mimeInit(char*) (mime.cc:332)
+        n1: 95880 0x36E99C: mainInitialize (main.cc:1242)
+         n1: 95880 0x36E99C: SquidMain(int, char**) (main.cc:1666)
+          n1: 95880 0x25CF10: SquidMainSafe (main.cc:1415)
+           n0: 95880 0x25CF10: main (main.cc:1403)
+     n0: 13160 in 1 place, below massif's threshold (1.00%)
+   n1: 68800 0x3AD70A: String::allocBuffer(unsigned long) (String.cc:33)
+    n0: 68800 in 2 places, all below massif's threshold (1.00%)
+  n1: 393216 0x50ECBD: Comm::SelectLoopInit() (ModEpoll.cc:69)
+   n1: 393216 0x36E05C: SquidMain(int, char**) (main.cc:1651)
+    n1: 393216 0x25CF10: SquidMainSafe (main.cc:1415)
+     n0: 393216 0x25CF10: main (main.cc:1403)
+  n1: 65590 0x66B69E: xstrdup (xstring.cc:30)
+   n0: 65590 in 35 places, all below massif's threshold (1.00%)
+  n0: 8949 in 10 places, all below massif's threshold (1.00%)
+ n0: 496938 in 342 places, all below massif's threshold (1.00%)
+ n1: 483328 0x68223BF: build_trtable (regexec.c:3398)
+  n1: 483328 0x682D187: transit_state (regexec.c:2253)
+   n1: 483328 0x682D187: check_matching (regexec.c:1118)
+    n1: 483328 0x682D187: re_search_internal (regexec.c:790)
+     n2: 483328 0x682E7F9: regexec@@GLIBC_2.3.4 (regexec.c:220)
+      n1: 481280 0x373006: mimeGetEntry(char const*, int) (mime.cc:92)
+       n1: 481280 0x37339A: mimeGetContentType(char const*) (mime.cc:177)
+        n1: 481280 0x3743AD: MimeIcon::load() (mime.cc:352)
+         n1: 481280 0x374A98: mimeInit(char*) (mime.cc:332)
+          n1: 481280 0x36E99C: mainInitialize (main.cc:1242)
+           n1: 481280 0x36E99C: SquidMain(int, char**) (main.cc:1666)
+            n1: 481280 0x25CF10: SquidMainSafe (main.cc:1415)
+             n0: 481280 0x25CF10: main (main.cc:1403)
+      n0: 2048 in 1 place, below massif's threshold (1.00%)
+ n1: 262184 0x25C5A2: __static_initialization_and_destruction_0 (FwdState.cc:78)
+  n1: 262184 0x25C5A2: _GLOBAL__sub_I__ZN8FwdState15CBDATA_FwdStateE (FwdState.cc:1343)
+   n1: 262184 0x66B93C: __libc_csu_init (in /usr/local/squid/sbin/squid)
+    n0: 262184 0x674EB27: (below main) (libc-start.c:266)
+ n2: 80856 0x568A105: OPENSSL_LH_insert (in /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1)
+  n2: 75432 0x56687F2: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1)
+   n1: 70272 0x5668B17: ERR_load_strings_const (in /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1)
+    n0: 70272 in 59 places, all below massif's threshold (1.00%)
+   n0: 5160 in 4 places, all below massif's threshold (1.00%)
+  n0: 5424 in 3 places, all below massif's threshold (1.00%)
+ n1: 72704 0x5E7D425: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+  n1: 72704 0x4010782: call_init (dl-init.c:72)
+   n1: 72704 0x4010782: _dl_init (dl-init.c:119)
+    n1: 72704 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+     n1: 72704 0x2: ???
+      n1: 72704 0x1FFF00044A: ???
+       n1: 72704 0x1FFF000466: ???
+        n0: 72704 0x1FFF00046A: ???
+#-----------
+snapshot=43
+#-----------
+time=105157
+mem_heap_B=6222057
+mem_heap_extra_B=244255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=107160
+mem_heap_B=6222057
+mem_heap_extra_B=244255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=109163
+mem_heap_B=6222057
+mem_heap_extra_B=244255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=111165
+mem_heap_B=6222057
+mem_heap_extra_B=244255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=113168
+mem_heap_B=6222057
+mem_heap_extra_B=244255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=115170
+mem_heap_B=6222057
+mem_heap_extra_B=244255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=117173
+mem_heap_B=6222057
+mem_heap_extra_B=244255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=119176
+mem_heap_B=6222057
+mem_heap_extra_B=244255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=121000
+mem_heap_B=6222057
+mem_heap_extra_B=244255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=122390
+mem_heap_B=6222057
+mem_heap_extra_B=244255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=124184
+mem_heap_B=6222057
+mem_heap_extra_B=244255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=125983
+mem_heap_B=6222073
+mem_heap_extra_B=244255
+mem_stacks_B=0
+heap_tree=detailed
+n7: 6222073 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n5: 3620588 0x66B487: xcalloc (xalloc.cc:83)
+  n10: 2916944 0x3AC83F: StatHist::init(unsigned int, double (*)(double), double (*)(double), double, double) (StatHist.cc:37)
+   n1: 321600 0x3A17C3: statCountersInitSpecial (stat.cc:1225)
+    n3: 321600 0x3A17C3: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A17DD: statCountersInitSpecial (stat.cc:1226)
+    n3: 321600 0x3A17DD: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A17FA: statCountersInitSpecial (stat.cc:1227)
+    n3: 321600 0x3A17FA: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A1817: statCountersInitSpecial (stat.cc:1228)
+    n3: 321600 0x3A1817: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A1834: statCountersInitSpecial (stat.cc:1229)
+    n3: 321600 0x3A1834: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A1851: statCountersInitSpecial (stat.cc:1233)
+    n3: 321600 0x3A1851: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A186E: statCountersInitSpecial (stat.cc:1234)
+    n3: 321600 0x3A186E: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 321600 0x3A188B: statCountersInitSpecial (stat.cc:1238)
+    n3: 321600 0x3A188B: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 172800 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 172800 0x36E986: mainInitialize (main.cc:1239)
+       n1: 172800 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 172800 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 172800 0x25CF10: main (main.cc:1403)
+     n1: 146400 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 146400 0x36E986: mainInitialize (main.cc:1239)
+       n1: 146400 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 146400 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 146400 0x25CF10: main (main.cc:1403)
+     n0: 2400 in 1 place, below massif's threshold (1.00%)
+   n1: 277648 0x3A18E1: statCountersInitSpecial (stat.cc:1246)
+    n3: 277648 0x3A18E1: statCountersInit(StatCounters*) (stat.cc:1254)
+     n1: 149184 0x3A4CBE: statInit() (stat.cc:1267)
+      n1: 149184 0x36E986: mainInitialize (main.cc:1239)
+       n1: 149184 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 149184 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 149184 0x25CF10: main (main.cc:1403)
+     n1: 126392 0x3A4C96: statInit() (stat.cc:1264)
+      n1: 126392 0x36E986: mainInitialize (main.cc:1239)
+       n1: 126392 0x36E986: SquidMain(int, char**) (main.cc:1666)
+        n1: 126392 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 126392 0x25CF10: main (main.cc:1403)
+     n0: 2072 in 1 place, below massif's threshold (1.00%)
+   n0: 66496 in 9 places, all below massif's threshold (1.00%)
+  n1: 414400 0x4B40C9: comm_init() (comm.cc:1223)
+   n1: 414400 0x36E05C: SquidMain(int, char**) (main.cc:1651)
+    n1: 414400 0x25CF10: SquidMainSafe (main.cc:1415)
+     n0: 414400 0x25CF10: main (main.cc:1403)
+  n1: 124320 0x50E054: Comm::CallbackTableInit() (IoCallback.cc:25)
+   n1: 124320 0x4B40F4: comm_init() (comm.cc:1230)
+    n1: 124320 0x36E05C: SquidMain(int, char**) (main.cc:1651)
+     n1: 124320 0x25CF10: SquidMainSafe (main.cc:1415)
+      n0: 124320 0x25CF10: main (main.cc:1403)
+  n0: 88508 in 20 places, all below massif's threshold (1.00%)
+  n2: 76416 0x666EF6: hash_create (hash.cc:117)
+   n1: 65536 0x664227: Store::Disks::init() (Disks.cc:268)
+    n1: 65536 0x661CB1: Store::Controller::init() (Controller.cc:65)
+     n1: 65536 0x3B524B: storeInit() (store.cc:1344)
+      n1: 65536 0x36E98B: mainInitialize (main.cc:1240)
+       n1: 65536 0x36E98B: SquidMain(int, char**) (main.cc:1666)
+        n1: 65536 0x25CF10: SquidMainSafe (main.cc:1415)
+         n0: 65536 0x25CF10: main (main.cc:1403)
+   n0: 10880 in 6 places, all below massif's threshold (1.00%)
+ n4: 1205459 0x66B50C: xmalloc (xalloc.cc:114)
+  n5: 737704 0x65D684: MemPoolMalloc::allocate() (PoolMalloc.cc:37)
+   n1: 223344 0x3B04A6: operator new (mem_node.h:19)
+    n1: 223344 0x3B04A6: mem_hdr::nodeToRecieve(long) (stmem.cc:312)
+     n1: 223344 0x3B113D: mem_hdr::write(StoreIOBuffer const&) (stmem.cc:361)
+      n1: 223344 0x3710EF: MemObject::write(StoreIOBuffer const&) (MemObject.cc:158)
+       n1: 223344 0x3B74C7: StoreEntry::write(StoreIOBuffer) (store.cc:829)
+        n1: 223344 0x3B1AD8: StoreEntry::append(char const*, int) (store.cc:855)
+         n1: 223344 0x355D5C: HttpReply::packHeadersUsingSlowPacker(Packable&) const (HttpReply.cc:98)
+          n2: 223344 0x3B5315: StoreEntry::startWriting() (store.cc:1834)
+           n1: 210936 0x3B5557: StoreEntry::replaceHttpReply(HttpReply*, bool) (store.cc:1817)
+            n1: 210936 0x373836: MimeIcon::created(StoreEntry*) (mime.cc:423)
+             n1: 210936 0x3743F5: MimeIcon::load() (mime.cc:357)
+              n1: 210936 0x374A98: mimeInit(char*) (mime.cc:332)
+               n1: 210936 0x36E99C: mainInitialize (main.cc:1242)
+                n1: 210936 0x36E99C: SquidMain(int, char**) (main.cc:1666)
+                 n1: 210936 0x25CF10: SquidMainSafe (main.cc:1415)
+                  n0: 210936 0x25CF10: main (main.cc:1403)
+           n0: 12408 in 1 place, below massif's threshold (1.00%)
+   n0: 176488 in 38 places, all below massif's threshold (1.00%)
+   n1: 160032 0x5BCE67: MemBlob::memAlloc(unsigned int) (MemBlob.cc:94)
+    n2: 160032 0x5BD4D9: MemBlob::MemBlob(unsigned int) (MemBlob.cc:57)
+     n1: 159992 0x5C1AF0: SBuf::reAlloc(unsigned int) (SBuf.cc:859)
+      n2: 159992 0x5C1FBD: SBuf::cow(unsigned int) (SBuf.cc:895)
+       n2: 139264 0x5C2364: SBuf::reserveCapacity(unsigned int) (SBuf.cc:108)
+        n1: 114688 0x5195DF: AnyP::Uri::absolute() const (Uri.cc:492)
+         n1: 114688 0x3599B8: HttpRequest::canonicalCleanUrl() const (HttpRequest.cc:679)
+          n1: 114688 0x2C68A6: ClientHttpRequest::setLogUriToRequestUri() (client_side_request.cc:1909)
+           n1: 114688 0x2C7453: ClientHttpRequest::initRequest(HttpRequest*) (client_side_request.cc:1654)
+            n1: 114688 0x48C16B: Http::One::Server::buildHttpRequest(RefCount<Http::Stream>&) (Http1Server.cc:193)
+             n1: 114688 0x48D7D1: Http::One::Server::processParsedRequest(RefCount<Http::Stream>&) (Http1Server.cc:227)
+              n1: 114688 0x2AC7EF: ConnStateData::clientParseRequests() (client_side.cc:2114)
+               n1: 114688 0x2B30F5: ConnStateData::afterClientRead() (client_side.cc:2148)
+                n1: 114688 0x492E4F: Server::doClientRead(CommIoCbParams const&) (Server.cc:176)
+                 n1: 114688 0x493E49: doDial (CommCalls.h:205)
+                  n1: 114688 0x493E49: JobDialer<Server>::dial(AsyncCall&) (AsyncJobCalls.h:174)
+                   n1: 114688 0x4A87B8: AsyncCall::make() (AsyncCall.cc:40)
+                    n1: 114688 0x4A9DD7: AsyncCallQueue::fireNext() (AsyncCallQueue.cc:56)
+                     n1: 114688 0x4AA158: AsyncCallQueue::fire() (AsyncCallQueue.cc:42)
+                      n1: 114688 0x300498: dispatchCalls (EventLoop.cc:144)
+                       n1: 114688 0x300498: EventLoop::runOnce() (EventLoop.cc:121)
+                        n1: 114688 0x300587: EventLoop::run() (EventLoop.cc:83)
+                         n1: 114688 0x36E388: SquidMain(int, char**) (main.cc:1707)
+                          n1: 114688 0x25CF10: SquidMainSafe (main.cc:1415)
+                           n0: 114688 0x25CF10: main (main.cc:1403)
+        n0: 24576 in 1 place, below massif's threshold (1.00%)
+       n0: 20728 in 1 place, below massif's threshold (1.00%)
+     n0: 40 in 1 place, below massif's threshold (1.00%)
+   n1: 109040 0x35C509: operator new (HttpRequest.h:49)
+    n2: 109040 0x35C509: HttpRequest::FromUrl(char const*, RefCount<MasterXaction> const&, HttpRequestMethod const&) (HttpRequest.cc:524)
+     n1: 95880 0x37366F: MimeIcon::created(StoreEntry*) (mime.cc:405)
+      n1: 95880 0x3743F5: MimeIcon::load() (mime.cc:357)
+       n1: 95880 0x374A98: mimeInit(char*) (mime.cc:332)
+        n1: 95880 0x36E99C: mainInitialize (main.cc:1242)
+         n1: 95880 0x36E99C: SquidMain(int, char**) (main.cc:1666)
+          n1: 95880 0x25CF10: SquidMainSafe (main.cc:1415)
+           n0: 95880 0x25CF10: main (main.cc:1403)
+     n0: 13160 in 1 place, below massif's threshold (1.00%)
+   n1: 68800 0x3AD70A: String::allocBuffer(unsigned long) (String.cc:33)
+    n0: 68800 in 2 places, all below massif's threshold (1.00%)
+  n1: 393216 0x50ECBD: Comm::SelectLoopInit() (ModEpoll.cc:69)
+   n1: 393216 0x36E05C: SquidMain(int, char**) (main.cc:1651)
+    n1: 393216 0x25CF10: SquidMainSafe (main.cc:1415)
+     n0: 393216 0x25CF10: main (main.cc:1403)
+  n1: 65590 0x66B69E: xstrdup (xstring.cc:30)
+   n0: 65590 in 35 places, all below massif's threshold (1.00%)
+  n0: 8949 in 10 places, all below massif's threshold (1.00%)
+ n0: 496954 in 342 places, all below massif's threshold (1.00%)
+ n1: 483328 0x68223BF: build_trtable (regexec.c:3398)
+  n1: 483328 0x682D187: transit_state (regexec.c:2253)
+   n1: 483328 0x682D187: check_matching (regexec.c:1118)
+    n1: 483328 0x682D187: re_search_internal (regexec.c:790)
+     n2: 483328 0x682E7F9: regexec@@GLIBC_2.3.4 (regexec.c:220)
+      n1: 481280 0x373006: mimeGetEntry(char const*, int) (mime.cc:92)
+       n1: 481280 0x37339A: mimeGetContentType(char const*) (mime.cc:177)
+        n1: 481280 0x3743AD: MimeIcon::load() (mime.cc:352)
+         n1: 481280 0x374A98: mimeInit(char*) (mime.cc:332)
+          n1: 481280 0x36E99C: mainInitialize (main.cc:1242)
+           n1: 481280 0x36E99C: SquidMain(int, char**) (main.cc:1666)
+            n1: 481280 0x25CF10: SquidMainSafe (main.cc:1415)
+             n0: 481280 0x25CF10: main (main.cc:1403)
+      n0: 2048 in 1 place, below massif's threshold (1.00%)
+ n1: 262184 0x25C5A2: __static_initialization_and_destruction_0 (FwdState.cc:78)
+  n1: 262184 0x25C5A2: _GLOBAL__sub_I__ZN8FwdState15CBDATA_FwdStateE (FwdState.cc:1343)
+   n1: 262184 0x66B93C: __libc_csu_init (in /usr/local/squid/sbin/squid)
+    n0: 262184 0x674EB27: (below main) (libc-start.c:266)
+ n2: 80856 0x568A105: OPENSSL_LH_insert (in /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1)
+  n2: 75432 0x56687F2: ??? (in /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1)
+   n1: 70272 0x5668B17: ERR_load_strings_const (in /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1)
+    n0: 70272 in 59 places, all below massif's threshold (1.00%)
+   n0: 5160 in 4 places, all below massif's threshold (1.00%)
+  n0: 5424 in 3 places, all below massif's threshold (1.00%)
+ n1: 72704 0x5E7D425: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+  n1: 72704 0x4010782: call_init (dl-init.c:72)
+   n1: 72704 0x4010782: _dl_init (dl-init.c:119)
+    n1: 72704 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.27.so)
+     n1: 72704 0x2: ???
+      n1: 72704 0x1FFF00044A: ???
+       n1: 72704 0x1FFF000466: ???
+        n0: 72704 0x1FFF00046A: ???
+#-----------
+snapshot=55
+#-----------
+time=127249
+mem_heap_B=6221293
+mem_heap_extra_B=243715
+mem_stacks_B=0
+heap_tree=empty
