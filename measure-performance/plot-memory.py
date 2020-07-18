@@ -52,13 +52,15 @@ def mkplot():
 
     ax.plot(df1['time(ms)'], df1['total(MB)'], '--', label='Squid', color = '0.1')
     ax.plot(df2['time(ms)'], df2['total(MB)'], '-', label='NFD', color = '0.4')
-
     ax.set_ylim([df1['total(MB)'].min(), df2['total(MB)'].max() + 2])
-    ax.annotate('about 7x', xy = (37, 4))
-    ax.arrow(35, 2, 0, 4, width=2, head_length = 1.5, length_includes_head=True)
     plt.xlabel("Time (seconds)")
     plt.ylabel("Heap Use (MB)")
     plt.legend()
+
+    # annotate
+    # ax.annotate('about 7x', xy = (37, 4))
+    # ax.arrow(35, 2, 0, 4, width=2, head_length = 1.5, length_includes_head=True)
+
     plt.savefig('plot-memory.pdf')  
 
 if __name__ == "__main__":

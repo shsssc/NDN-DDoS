@@ -54,11 +54,14 @@ def mkplot():
     ax.plot(xnew, ynew, '-', label='NFD', color='0.4')
     ax.set_ylim([df1['cputime(ticks)'].min(), df2['cputime(ticks)'].max() + 5])
     ax.set_xlim(0, 40)
-    ax.annotate('about 5x', xy = (22, 8))
-    ax.arrow(20, 5, 0, 8, width=1, head_length = 3,length_includes_head=True)
     plt.xlabel("Time (seconds)")
     plt.ylabel("CPU Use (ticks)")
     plt.legend()
+
+    # annotate
+    # ax.annotate('about 5x', xy = (22, 8))
+    # ax.arrow(20, 5, 0, 8, width=1, head_length = 3,length_includes_head=True)
+
     plt.savefig('plot-cpu.pdf')  
 
 if __name__ == "__main__":
