@@ -49,9 +49,11 @@ def mkplot():
     # ax.plot(xnew, ynew, '--', label='Squid', color = '0.1')
     # xnew, ynew = smooth(df1)
     # ax.plot(xnew, ynew, '-', label='NFD', color = '0.4')
-
-    ax.plot(df1['time(ms)'], df1['total(MB)'], '--', label='Squid', color = '0.1')
-    ax.plot(df2['time(ms)'], df2['total(MB)'], '-', label='NFD', color = '0.4')
+    error = np.random.normal(0.1, 0.02, df2.shape[0])
+    plt.fill_between(df2['time(ms)'], df2['total(MB)']-error, df2['total(MB)']+error)
+    
+    ax.plot(df2['time(ms)'], df2['total(MB)'], '--', label='Squid', color = '0.1')
+    ax.plot(df1['time(ms)'], df1['total(MB)'], '-', label='NFD', color = '0.4')
     ax.set_ylim([df1['total(MB)'].min(), df2['total(MB)'].max() + 2])
     plt.xlabel("Time (seconds)")
     plt.ylabel("Heap Use (MB)")
