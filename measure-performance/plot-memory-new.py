@@ -59,22 +59,22 @@ def mkplot():
     rects1 = ax.bar(x - width/2, squid_data, yerr=squid_data_std, width=width, label='Squid')
     rects2 = ax.bar(x + width/2, nfd_data, yerr=nfd_data_std, width=width, label='NFD')
 
-    ax.annotate('{:.2f}K'.format(df2['total(MB)'].mean()),
+    ax.annotate('{:.2f}MB'.format(df2['total(MB)'].mean()),
                 xy=(rects1[0].get_x() + rects1[0].get_width() / 2, rects1[0].get_height()),
                 xytext=(0, 3),  # 3 points vertical offset
                 textcoords="offset points",
                 ha='center', va='bottom')
-    ax.annotate('{:.2f}KB'.format(df4['total(MB)'].mean()),
+    ax.annotate('{:.2f}MB'.format(df4['total(MB)'].mean()),
                 xy=(rects1[1].get_x() + rects1[1].get_width() / 2, rects1[1].get_height()),
                 xytext=(0, 3),  # 3 points vertical offset
                 textcoords="offset points",
                 ha='center', va='bottom')
-    ax.annotate('{:.2f}K'.format(df1['total(MB)'].mean()),
+    ax.annotate('{:.2f}MB'.format(df1['total(MB)'].mean()),
                 xy=(rects2[0].get_x() + rects2[0].get_width() / 2, rects2[0].get_height()),
                 xytext=(0, 3),  # 3 points vertical offset
                 textcoords="offset points",
                 ha='center', va='bottom')
-    ax.annotate('{:.2f}KB'.format(df3['total(MB)'].mean()),
+    ax.annotate('{:.2f}MB'.format(df3['total(MB)'].mean()),
                 xy=(rects2[1].get_x() + rects2[1].get_width() / 2, rects2[1].get_height()),
                 xytext=(0, 3),  # 3 points vertical offset
                 textcoords="offset points",
@@ -83,7 +83,7 @@ def mkplot():
     ax.set_xticks(x)
     ax.set_xticklabels(labels)
     plt.legend()
-    plt.title("Heap Memory Use of Squid and NFD")
+    plt.title("Heap Memory Use")
 
     # annotate
     # ax.annotate('about 7x', xy = (37, 4))

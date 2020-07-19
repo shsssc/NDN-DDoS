@@ -6,68 +6,56 @@ import numpy as np
 from scipy.interpolate import make_interp_spline, BSpline
 import sys
 
-def get_nfd_result_cachehit() -> str:
-    return sys.argv[1]
-
-def get_squid_result_cachehit() -> str:
-    return sys.argv[2]
-
-def get_nfd_result_cachemiss() -> str:
-    return sys.argv[3]
-
-def get_squid_result_cachemiss() -> str:
-    return sys.argv[4]
-
-def smooth(df):
-    xnew = np.linspace(df['time(s)'].min(), df['time(s)'].max(), 1000)
-    df['usertime(ticks)'] = df['usertime(ticks)'].diff()
-    df['usertime(ticks)'].at[0] = 0
-    df['systime(ticks)'] = df['systime(ticks)'].diff()
-    df['systime(ticks)'].at[0] = 0
-    df['cputime(ticks)'] = df['usertime(ticks)'] + df['systime(ticks)']
-    spl = make_interp_spline(df['time(s)'], df['cputime(ticks)'])
-    ynew = spl(xnew)
-    for i in range(len(ynew)):
-        if ynew[i] <= 0:
-            ynew[i] = 0
-    return xnew, ynew
-
 def mkplot():
     # figure and plot
     fig = plt.figure()
     fig.set_size_inches(5, 4) 
     ax = fig.add_subplot(111)
 
-    # read data
-    header_list = ['time(s)', 'pid', 'command', 'usertime(ticks)', 'systime(ticks)', 'vm_size(bytes)', 'cached_page_size(pages)']
-    df1 = pd.read_csv(get_nfd_result_cachehit(), sep='\s+', names=header_list)
-    df1['time(s)'] = df1['time(s)'] - df1['time(s)'][0]
-    df2 = pd.read_csv(get_squid_result_cachehit(), sep='\s+', names=header_list)
-    df2['time(s)'] = df2['time(s)'] - df2['time(s)'][0]
-    df3 = pd.read_csv(get_nfd_result_cachemiss(), sep='\s+', names=header_list)
-    df3['time(s)'] = df3['time(s)'] - df3['time(s)'][0]
-    df4 = pd.read_csv(get_squid_result_cachemiss(), sep='\s+', names=header_list)
-    df4['time(s)'] = df4['time(s)'] - df4['time(s)'][0]
-    
+
+    squid_vals = [3276/90000, 1080/10000]
+    nfd_vals = [737/90000, 152/10000]
+    # read data: cachehit, cachemiss
+    labels = ['Cache Hit', 'Cache Miss']
+    squid_total_cpu = [1, 1] # 3276, 1080
+    nfd_total_cpu = [nfd_vals[0]/squid_vals[0], nfd_vals[1]/squid_vals[1]]
+    squid_data_std = [0, 0]
+    nfd_data_std = [0, 0]
 
     # plots
-    xnew1, ynew1 = smooth(df2)
-    xnew2, ynew2 = smooth(df4)
-    ax.fill_between(xnew1, ynew1, ynew2)
-    # ax.plot(xnew, ynew, '--', label='Squid', color='0.1')
-    xnew, ynew = smooth(df1)
-    ax.plot(xnew, ynew, '-', label='NFD', color='0.4')
-    ax.set_ylim([df1['cputime(ticks)'].min(), df2['cputime(ticks)'].max() + 5])
-    ax.set_xlim(0, 40)
-    plt.xlabel("Time (seconds)")
-    plt.ylabel("CPU Use (ticks)")
+    x = np.arange(len(labels))
+    width = 0.15
+    rects1 = ax.bar(x - width/2, squid_total_cpu, yerr=squid_data_std, width=width, label='Squid')
+    rects2 = ax.bar(x + width/2, nfd_total_cpu, yerr=nfd_data_std, width=width, label='NFD')
+
+    ax.annotate('{:.2f}ms'.format(squid_vals[0] * 10),
+                xy=(rects1[0].get_x() + rects1[0].get_width() / 2, rects1[0].get_height()),
+                xytext=(0, 3),  # 3 points vertical offset
+                textcoords="offset points",
+                ha='center', va='bottom')
+    ax.annotate('{:.2f}ms'.format(squid_vals[1] * 10),
+                xy=(rects1[1].get_x() + rects1[1].get_width() / 2, rects1[1].get_height()),
+                xytext=(0, 3),  # 3 points vertical offset
+                textcoords="offset points",
+                ha='center', va='bottom')
+    ax.annotate('{:.2f}ms'.format(nfd_vals[0] * 10),
+                xy=(rects2[0].get_x() + rects2[0].get_width() / 2, rects2[0].get_height()),
+                xytext=(0, 3),  # 3 points vertical offset
+                textcoords="offset points",
+                ha='center', va='bottom')
+    ax.annotate('{:.2f}ms'.format(nfd_vals[1] * 10),
+                xy=(rects2[1].get_x() + rects2[1].get_width() / 2, rects2[1].get_height()),
+                xytext=(0, 3),  # 3 points vertical offset
+                textcoords="offset points",
+                ha='center', va='bottom')
+
+    ax.set_ylim(0, 1.1)
+    ax.set_xticks(x)
+    ax.set_xticklabels(labels)
     plt.legend()
+    plt.title("CPU Use (Avg. CPU time ms/request)")
 
-    # annotate
-    # ax.annotate('about 5x', xy = (22, 8))
-    # ax.arrow(20, 5, 0, 8, width=1, head_length = 3,length_includes_head=True)
-
-    plt.savefig('plot-cpu-new-' + sys.argv[5] + '.pdf')  
+    plt.savefig('plot-cpu-bar.pdf')  
 
 if __name__ == "__main__":
     mkplot()

@@ -39,26 +39,31 @@ def mkplot():
         nfd_all_lines = f.readlines()
     with open(get_squid_filename()) as f:
         squid_all_lines = f.readlines()
-    nfd_pkt_num = 0
-    squid_pkt_num = 0
-    nfd_traffic = 0
-    squid_traffic = 0
+    nfd_pkt_num_hit = 0
+    squid_pkt_num_hit = 0
+    nfd_traffic_hit = 0
+    squid_traffic_hit = 0
     for line in nfd_all_lines:
         re = packet_len_re.search(line)
         if re:
             num = int(re.group(1))
-            nfd_traffic = nfd_traffic + num
-            nfd_pkt_num += 1
+            nfd_traffic_hit = nfd_traffic_hit + num
+            nfd_pkt_num_hit += 1
     for line in squid_all_lines:
         re = packet_len_re.search(line)
         if re:
             num = int(re.group(1))
-            squid_traffic = squid_traffic + num
-            squid_pkt_num += 1
+            squid_traffic_hit = squid_traffic_hit + num
+            squid_pkt_num_hit += 1
+    nfd_pkt_num_hit /= 90000
+    squid_pkt_num_hit /= 90000
+    nfd_traffic_hit /= 90000
+    squid_traffic_hit /= 90000
 
-    labels = ['# of Packets', 'Amount of Traffic']
+    
+    labels = ['# of Packets', 'Amt. Traffic']
     squid_ys = [1, 1]
-    nfd_ys = [nfd_pkt_num/squid_pkt_num, nfd_traffic/squid_traffic]
+    nfd_ys = [nfd_pkt_num_hit/squid_pkt_num_hit, nfd_traffic_hit/squid_traffic_hit]
 
     # plots
     x = np.arange(len(labels))
@@ -66,22 +71,22 @@ def mkplot():
     rects1 = ax.bar(x - width/2, squid_ys, width, label='Squid')
     rects2 = ax.bar(x + width/2, nfd_ys, width, label='NFD')
 
-    ax.annotate('{:.2f}K'.format(squid_pkt_num/1000),
+    ax.annotate('{:.2f}'.format(squid_pkt_num_hit),
                 xy=(rects1[0].get_x() + rects1[0].get_width() / 2, rects1[0].get_height()),
                 xytext=(0, 3),  # 3 points vertical offset
                 textcoords="offset points",
                 ha='center', va='bottom')
-    ax.annotate('{:.2f}MB'.format(squid_traffic/1000000),
+    ax.annotate('{:.2f}KB'.format(squid_traffic_hit/1000),
                 xy=(rects1[1].get_x() + rects1[1].get_width() / 2, rects1[1].get_height()),
                 xytext=(0, 3),  # 3 points vertical offset
                 textcoords="offset points",
                 ha='center', va='bottom')
-    ax.annotate('{:.2f}K'.format(nfd_pkt_num/1000),
+    ax.annotate('{:.2f}'.format(nfd_pkt_num_hit),
                 xy=(rects2[0].get_x() + rects2[0].get_width() / 2, rects2[0].get_height()),
                 xytext=(0, 3),  # 3 points vertical offset
                 textcoords="offset points",
                 ha='center', va='bottom')
-    ax.annotate('{:.2f}MB'.format(nfd_traffic/1000000),
+    ax.annotate('{:.2f}KB'.format(nfd_traffic_hit/1000),
                 xy=(rects2[1].get_x() + rects2[1].get_width() / 2, rects2[1].get_height()),
                 xytext=(0, 3),  # 3 points vertical offset
                 textcoords="offset points",
@@ -92,7 +97,7 @@ def mkplot():
     ax.set_xticklabels(labels)
     # plt.ylabel("")
     plt.legend()
-    plt.title("Amount of Traffic through Squid and NFD")
+    plt.title("Amount of Traffic (Avg. per request)")
 
     # annotate
     # ax.annotate('about 7x', xy = (37, 4))
