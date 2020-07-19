@@ -31,4 +31,4 @@ timeout 39.1 /home/pikachu/ndn-cxx/gitrepos/NDN-DDoS/fitt-evaluation/consumer --
 sleep 66;
 /home/pikachu/ndn-cxx/gitrepos/NDN-DDoS/measure-performance/mem-log-convert.sh `ls ./massif*` > nfd_memory
 
-
+chmod 777 ./*

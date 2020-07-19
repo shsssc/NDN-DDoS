@@ -1,0 +1,43 @@
+This is ApacheBench, Version 2.3 <$Revision: 1807734 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 127.0.0.1 (be patient)
+
+
+Server Software:        Werkzeug/1.0.1
+Server Hostname:        127.0.0.1
+Server Port:            443
+SSL/TLS Protocol:       TLSv1.2,ECDHE-RSA-AES256-GCM-SHA384,1024,256
+
+Document Path:          /dynamic/dynamic1
+Document Length:        2000 bytes
+
+Concurrency Level:      6
+Time taken for tests:   83.285 seconds
+Complete requests:      10000
+Failed requests:        0
+Total transferred:      24259972 bytes
+HTML transferred:       20000000 bytes
+Requests per second:    120.07 [#/sec] (mean)
+Time per request:       49.971 [ms] (mean)
+Time per request:       8.329 [ms] (mean, across all concurrent requests)
+Transfer rate:          284.46 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        5    6   6.2      5     329
+Processing:    31   44   3.9     44     252
+Waiting:       28   42   3.5     41     214
+Total:         36   50   9.5     49     455
+
+Percentage of the requests served within a certain time (ms)
+  50%     49
+  66%     49
+  75%     50
+  80%     50
+  90%     52
+  95%     52
+  98%     53
+  99%     54
+ 100%    455 (longest request)
