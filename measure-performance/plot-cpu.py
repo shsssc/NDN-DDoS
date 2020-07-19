@@ -62,7 +62,7 @@ def mkplot():
     # ax.annotate('about 5x', xy = (22, 8))
     # ax.arrow(20, 5, 0, 8, width=1, head_length = 3,length_includes_head=True)
 
-    plt.savefig('plot-cpu.pdf')  
+    plt.savefig('plot-cpu-' + sys.argv[3] + '.pdf')  
 
 if __name__ == "__main__":
     mkplot()

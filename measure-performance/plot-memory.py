@@ -63,7 +63,7 @@ def mkplot():
     # ax.annotate('about 7x', xy = (37, 4))
     # ax.arrow(35, 2, 0, 4, width=2, head_length = 1.5, length_includes_head=True)
 
-    plt.savefig('plot-memory.pdf')  
+    plt.savefig('plot-memory-' + sys.argv[3] + '.pdf')  
 
 if __name__ == "__main__":
     mkplot()

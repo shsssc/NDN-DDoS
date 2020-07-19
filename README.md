@@ -1,0 +1,5 @@
+We evaluate the computation and communication overhead of NDN forwarding daemon (NFD) and Squid, one of the most widely used web proxy.
+Specifically, we simulate today's practice of Maas and NDN/FITT's DDoS mitigation with the same hardware settings (i.e., Core i9 4.6GHZ, 32GB DDR4 RAM) and same number of clients requesting same amount of data and computation (6 clients asking for both static content and dynamically-computed content simulatiously).
+We first measure the CPU and memory use of a single-thread Squid and NFD/FITT under the same load. It shows NFD/FITT has a much less overhead than Squid: Squid poses Xx memory and Xx CPU more than NFD/FITT.
+We also measure the total number of packets involved in MaaS versus NDN/FITT. Since the TLS traffic will be terminated by both CDN node and MaaS node, there are Xx more Internet packets and Xx more sessions compared with NDN.
+(there is no session in NDN, for the sake of comparision, we consider all Interest packets sent from a client and corresponding Data packets to fetch the content from the server as one session).
