@@ -71,7 +71,7 @@ def mkplot():
                 xytext=(0, 3),  # 3 points vertical offset
                 textcoords="offset points",
                 ha='center', va='bottom')
-    ax.annotate('{:.2f}KB'.format(squid_traffic/1000),
+    ax.annotate('{:.2f}MB'.format(squid_traffic/1000000),
                 xy=(rects1[1].get_x() + rects1[1].get_width() / 2, rects1[1].get_height()),
                 xytext=(0, 3),  # 3 points vertical offset
                 textcoords="offset points",
@@ -81,7 +81,7 @@ def mkplot():
                 xytext=(0, 3),  # 3 points vertical offset
                 textcoords="offset points",
                 ha='center', va='bottom')
-    ax.annotate('{:.2f}KB'.format(nfd_traffic/1000),
+    ax.annotate('{:.2f}MB'.format(nfd_traffic/1000000),
                 xy=(rects2[1].get_x() + rects2[1].get_width() / 2, rects2[1].get_height()),
                 xytext=(0, 3),  # 3 points vertical offset
                 textcoords="offset points",
@@ -92,6 +92,7 @@ def mkplot():
     ax.set_xticklabels(labels)
     # plt.ylabel("")
     plt.legend()
+    plt.title("Amount of Traffic through Squid and NFD")
 
     # annotate
     # ax.annotate('about 7x', xy = (37, 4))

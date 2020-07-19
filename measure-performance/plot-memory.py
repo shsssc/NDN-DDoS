@@ -39,21 +39,21 @@ def mkplot():
     header_list = ['n', 'time(ms)', 'total(B)', 'useful-heap(B)', 'extra-heap(B)', 'stacks(B)']
     df1 = pd.read_csv(get_nfd_result(), sep='\s+', names=header_list)
     df1['total(MB)'] = df1['total(B)'].str.replace(",", "").astype(int) / 1000000
-    df1['time(ms)'] = df1['time(ms)'].str.replace(",", "").astype(int) / 1000
+    df1['time(s)'] = df1['time(ms)'].str.replace(",", "").astype(int) / 1000
     df2 = pd.read_csv(get_squid_result(), sep='\s+', names=header_list)
     df2['total(MB)'] = df2['total(B)'].str.replace(",", "").astype(int) / 1000000
-    df2['time(ms)'] = df2['time(ms)'].str.replace(",", "").astype(int) / 1000
+    df2['time(s)'] = df2['time(ms)'].str.replace(",", "").astype(int) / 1000
+
+    # df1['time(s)'] = df1['time(s)'] * (float(df2.shape[0]) / float(df1.shape[0]))
+    # df2 = df2.loc[df2['time(s)'] < 50]
+    # df1 = df1.loc[df1['time(s)'] < 50]
 
     # plots
-    # xnew, ynew = smooth(df2)
-    # ax.plot(xnew, ynew, '--', label='Squid', color = '0.1')
-    # xnew, ynew = smooth(df1)
-    # ax.plot(xnew, ynew, '-', label='NFD', color = '0.4')
-    error = np.random.normal(0.1, 0.02, df2.shape[0])
-    plt.fill_between(df2['time(ms)'], df2['total(MB)']-error, df2['total(MB)']+error)
+    # error = np.random.normal(0.1, 0.02, df2.shape[0])
+    # plt.fill_between(df2['time(ms)'], df2['total(MB)']-error, df2['total(MB)']+error)
     
-    ax.plot(df2['time(ms)'], df2['total(MB)'], '--', label='Squid', color = '0.1')
-    ax.plot(df1['time(ms)'], df1['total(MB)'], '-', label='NFD', color = '0.4')
+    ax.plot(df1['time(s)'], df2['total(MB)'][:df1.shape[0]], '--', label='Squid', color = '0.1')
+    ax.plot(df1['time(s)'], df1['total(MB)'], '-', label='NFD', color = '0.4')
     ax.set_ylim([df1['total(MB)'].min(), df2['total(MB)'].max() + 2])
     plt.xlabel("Time (seconds)")
     plt.ylabel("Heap Use (MB)")
