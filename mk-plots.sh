@@ -7,3 +7,5 @@ $PY measure-performance/plot-memory.py results/cachemiss/nfd/nfd_memory results/
 
 $PY measure-performance/plot-cpu.py results/cachehit/nfd/nfd-measurement.log results/cachehit/squid/squid-measurement.log cachehit
 $PY measure-performance/plot-memory.py results/cachehit/nfd/nfd_memory results/cachehit/squid/squid_memory cachehit
+
+$PY measure-performance/plot-traffic.py results/cachehit/nfd/packets.log results/cachehit/squid/packets.log

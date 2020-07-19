@@ -9,7 +9,7 @@ import sys
 def get_nfd_result() -> str:
     if len(sys.argv) < 3:
         print(
-            "Usage:", sys.argv[0], "nfd_csv squid_csv \n", file=sys.stderr)
+            "Usage:", sys.argv[0], "nfd_csv squid_csv output_fileName\n", file=sys.stderr)
         exit(-1)
     return sys.argv[1]
 
