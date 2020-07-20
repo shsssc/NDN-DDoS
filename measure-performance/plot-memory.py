@@ -6,19 +6,17 @@ import numpy as np
 from scipy.interpolate import make_interp_spline, BSpline
 import sys
 
-def get_nfd_result() -> str:
-    if len(sys.argv) < 3:
-        print(
-            "Usage:", sys.argv[0], "nfd_csv squid_csv output_fileName\n", file=sys.stderr)
-        exit(-1)
-    return sys.argv[1]
+def get_nfd_result_cachehit() -> str:
+    return 'results/cachehit/nfd/nfd_memory_sample'
 
-def get_squid_result() -> str:
-    if len(sys.argv) < 3:
-        print(
-            "Usage:", sys.argv[0], "nfd_csv squid_csv \n", file=sys.stderr)
-        exit(-1)
-    return sys.argv[2]
+def get_squid_result_cachehit() -> str:
+    return 'results/cachehit/squid/squid_memory_sample'
+
+def get_nfd_result_cachemiss() -> str:
+    return 'results/cachemiss/nfd/nfd_memory_sample'
+
+def get_squid_result_cachemiss() -> str:
+    return 'results/cachemiss/squid/squid_memory_sample'
 
 def smooth(df):
     xnew = np.linspace(df['time(ms)'].min(), df['time(ms)'].max(), 1000)
@@ -37,33 +35,62 @@ def mkplot():
 
     # read data
     header_list = ['n', 'time(ms)', 'total(B)', 'useful-heap(B)', 'extra-heap(B)', 'stacks(B)']
-    df1 = pd.read_csv(get_nfd_result(), sep='\s+', names=header_list)
+    df1 = pd.read_csv(get_nfd_result_cachehit(), sep='\s+', names=header_list)
     df1['total(MB)'] = df1['total(B)'].str.replace(",", "").astype(int) / 1000000
-    df1['time(s)'] = df1['time(ms)'].str.replace(",", "").astype(int) / 1000
-    df2 = pd.read_csv(get_squid_result(), sep='\s+', names=header_list)
+    df2 = pd.read_csv(get_squid_result_cachehit(), sep='\s+', names=header_list)
     df2['total(MB)'] = df2['total(B)'].str.replace(",", "").astype(int) / 1000000
-    df2['time(s)'] = df2['time(ms)'].str.replace(",", "").astype(int) / 1000
+    df3 = pd.read_csv(get_nfd_result_cachemiss(), sep='\s+', names=header_list)
+    df3['total(MB)'] = df3['total(B)'].str.replace(",", "").astype(int) / 1000000
+    df4 = pd.read_csv(get_squid_result_cachemiss(), sep='\s+', names=header_list)
+    df4['total(MB)'] = df4['total(B)'].str.replace(",", "").astype(int) / 1000000
 
-    # df1['time(s)'] = df1['time(s)'] * (float(df2.shape[0]) / float(df1.shape[0]))
-    # df2 = df2.loc[df2['time(s)'] < 50]
-    # df1 = df1.loc[df1['time(s)'] < 50]
+    labels = ["Cache Hit", "Cache Miss"]
+    squid_data = [1, 1]
+    squid_data_std = [df2['total(MB)'].std()/ df2['total(MB)'].mean(), df4['total(MB)'].std()/df4['total(MB)'].mean()]
+    nfd_data = [df1['total(MB)'].mean() / df2['total(MB)'].mean(), df3['total(MB)'].mean() / df4['total(MB)'].mean()]
+    nfd_data_std = [df1['total(MB)'].std()/ df2['total(MB)'].mean(), df3['total(MB)'].std()/ df4['total(MB)'].mean()]
 
     # plots
     # error = np.random.normal(0.1, 0.02, df2.shape[0])
     # plt.fill_between(df2['time(ms)'], df2['total(MB)']-error, df2['total(MB)']+error)
     
-    ax.plot(df1['time(s)'], df2['total(MB)'][:df1.shape[0]], '--', label='Squid', color = '0.1')
-    ax.plot(df1['time(s)'], df1['total(MB)'], '-', label='NFD', color = '0.4')
-    ax.set_ylim([df1['total(MB)'].min(), df2['total(MB)'].max() + 2])
-    plt.xlabel("Time (seconds)")
-    plt.ylabel("Heap Use (MB)")
+    x = np.arange(len(labels))
+    width = 0.15
+    rects1 = ax.bar(x - width/2, squid_data, yerr=squid_data_std, width=width, label='Squid')
+    rects2 = ax.bar(x + width/2, nfd_data, yerr=nfd_data_std, width=width, label='NFD')
+
+    ax.annotate('{:.2f}MB'.format(df2['total(MB)'].mean()),
+                xy=(rects1[0].get_x() + rects1[0].get_width() / 2, rects1[0].get_height()),
+                xytext=(0, 3),  # 3 points vertical offset
+                textcoords="offset points",
+                ha='center', va='bottom')
+    ax.annotate('{:.2f}MB'.format(df4['total(MB)'].mean()),
+                xy=(rects1[1].get_x() + rects1[1].get_width() / 2, rects1[1].get_height()),
+                xytext=(0, 3),  # 3 points vertical offset
+                textcoords="offset points",
+                ha='center', va='bottom')
+    ax.annotate('{:.2f}MB'.format(df1['total(MB)'].mean()),
+                xy=(rects2[0].get_x() + rects2[0].get_width() / 2, rects2[0].get_height()),
+                xytext=(0, 3),  # 3 points vertical offset
+                textcoords="offset points",
+                ha='center', va='bottom')
+    ax.annotate('{:.2f}MB'.format(df3['total(MB)'].mean()),
+                xy=(rects2[1].get_x() + rects2[1].get_width() / 2, rects2[1].get_height()),
+                xytext=(0, 3),  # 3 points vertical offset
+                textcoords="offset points",
+                ha='center', va='bottom')
+
+    ax.set_ylim(0, 1.1)
+    ax.set_xticks(x)
+    ax.set_xticklabels(labels)
     plt.legend()
+    plt.title("Heap Memory Use")
 
     # annotate
     # ax.annotate('about 7x', xy = (37, 4))
     # ax.arrow(35, 2, 0, 4, width=2, head_length = 1.5, length_includes_head=True)
 
-    plt.savefig('plot-memory-' + sys.argv[3] + '.pdf')  
+    plt.savefig('plot-memory-bar.pdf')  
 
 if __name__ == "__main__":
     mkplot()
