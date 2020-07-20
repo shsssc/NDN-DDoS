@@ -56,8 +56,10 @@ def mkplot():
     
     x = np.arange(len(labels))
     width = 0.15
-    rects1 = ax.bar(x - width/2, squid_data, yerr=squid_data_std, width=width, label='Squid')
-    rects2 = ax.bar(x + width/2, nfd_data, yerr=nfd_data_std, width=width, label='NFD')
+    rects1 = ax.bar(x - width/2, squid_data, width=width, label='Squid')
+    ax.errorbar(x - width/2, squid_data, yerr=squid_data_std, elinewidth=3, ls='none', ecolor='0.0', capsize=2)
+    rects2 = ax.bar(x + width/2, nfd_data, width=width, label='NFD')
+    ax.errorbar(x + width/2, nfd_data, yerr=nfd_data_std, elinewidth=3, ls='none', ecolor='0.0', capsize=2)
 
     ax.annotate('{:.2f}MB'.format(df2['total(MB)'].mean()),
                 xy=(rects1[0].get_x() + rects1[0].get_width() / 2, rects1[0].get_height()),

@@ -74,8 +74,10 @@ def mkplot():
     # plots
     x = np.arange(len(labels))
     width = 0.15
-    rects1 = ax.bar(x - width/2, squid_ys, width, yerr=squid_stds, label='Squid')
+    rects1 = ax.bar(x - width/2, squid_ys, width, label='Squid')
+    ax.errorbar(x - width/2, squid_ys, yerr=squid_stds, elinewidth=3, ls='none', ecolor='0.0', capsize=2)
     rects2 = ax.bar(x + width/2, nfd_ys, width, yerr=nfd_stds, label='NFD')
+    ax.errorbar(x + width/2, nfd_ys, yerr=nfd_stds, elinewidth=3, ls='none', ecolor='0.0', capsize=2)
 
     ax.annotate('{:.2f}'.format(squid_pkt_num_hit_values.mean()),
                 xy=(rects1[0].get_x() + rects1[0].get_width() / 2, rects1[0].get_height()),
