@@ -6,18 +6,17 @@ import numpy as np
 from scipy.interpolate import make_interp_spline, BSpline
 import sys
 
-
 def mk_plot():
     fig = plt.figure()
-    fig.set_size_inches(6, 7)
+    fig.set_size_inches(6, 6)
     ax = fig.add_subplot(111)
 
     labels = ['CPU time/req\n@Static Req',
               'CPU time/req\n@Dynamic Req',
               'Heap Memory\n@Static Req',
               'Heap Memory\n@Dynamic Req',
-              '# of pkts/req',
-              'bandwidth/req',
+              'IP packets/req',
+              'Bandwidth/req',
               ]
 
     cpu_squid_ys = [1, 1]
@@ -53,11 +52,11 @@ def mk_plot():
 
     y = np.arange(len(labels))
     height = 0.3
-    squid_rects = ax.barh(y - height/2, squid_ys, height=height,
+    squid_rects = ax.barh(y - height/2, squid_ys, height=height, color='0.7',
                           align='center', label='CDN (Squid, TLS Traffic)')
     ax.errorbar(squid_ys, y - height/2, xerr=squid_stds,
                 elinewidth=3, ls='none', ecolor='0.0', capsize=2)
-    nfd_rects = ax.barh(y + height/2, nfd_ys, height=height,
+    nfd_rects = ax.barh(y + height/2, nfd_ys, height=height, color='0.2',
                         align='center', label='NDN (NFD, NDN over IP)')
     ax.errorbar(nfd_ys, y + height/2, xerr=nfd_stds,
                 elinewidth=3, ls='none', ecolor='0.0', capsize=2)
@@ -142,7 +141,6 @@ def mk_plot():
     ax.set_yticks(y)
     ax.set_yticklabels(labels)
     ax.invert_yaxis()  # labels read top-to-bottom
-    ax.set_xlabel('Comparison')
 
     plt.legend(ncol=2, bbox_to_anchor=(0, 1),
                loc='lower left', fontsize='small')
